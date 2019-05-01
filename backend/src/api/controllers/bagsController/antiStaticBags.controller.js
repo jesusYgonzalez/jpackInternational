@@ -25,7 +25,8 @@ export default {
       weight: req.body.weight,
       bagPercase: req.body.bagPercase
     });
-    antiStaticBags.save()
+    antiStaticBags
+      .save()
       .then(result => {
         res.status(201).json({
           message: "Employee added successfully",
@@ -35,6 +36,17 @@ export default {
       .catch(error => {
         res.status(500).json({
           message: "Couldn't save Product!!"
+        });
+      });
+  },
+  delete(req, res) {
+    AntiStaticBags.deleteOne({_id: req.params.id}).then(result => {
+      console.log(result);
+      res.status(200).json({message: "Employee deleted!"});
+    })
+      .catch(error => {
+        res.status(500).json({
+          message: "Couldn't delete Employee!!"
         });
       });
   }
