@@ -6,5 +6,8 @@ export const router = express.Router();
 
 //////////////////////////////// BAGS ////////////////////////////////
 //ANTI STATIC BAG//
-router.get('/bags/antiStaticBags', antiStaticBags.findAll);
 router.post('/bags/antiStaticBags', antiStaticBags.create);
+router.get('/bags/antiStaticBags/:id', antiStaticBags.findOne);
+router.get('/bags/antiStaticBags', antiStaticBags.findAll);
+router.put('/bags/antiStaticBags/:id', antiStaticBags.update);
+router.delete('/bags/antiStaticBags/:id', antiStaticBags.delete);
