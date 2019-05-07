@@ -1,0 +1,74 @@
+@import "../../scss/variables";
+
+/////////////////////// MAIN ////////////////////////////////////
+.main {
+  //border: 1px dashed black;
+  margin-top: 7px;
+  padding: 1.6rem;
+
+  &__products {
+    //border: 1px solid black;
+  }
+
+  button {
+    color: #fff;
+    //color: rgba(255, 255, 255, 0.5);
+  }
+
+  button:hover {
+    text-decoration: none !important;
+  }
+
+  .card-header {
+    height: 4.8rem;
+  }
+}
+
+/////////////////////// MAIN CAROUSEL ////////////////////////////////
+.productInfo {
+  background-color: white;
+  border-radius: .5rem;
+}
+
+/////////////////////// FEATURED //////////////////////////////////////
+section {
+  border-radius: 1rem;
+}
+
+.featured {
+  border-radius: .5rem;
+
+  &__items {
+    font-size: 1.4rem;
+  }
+
+  &__body {
+    background-color: $color-primary;
+    border-radius: 0 0 .5rem .5rem;
+  }
+}
+
+/////////////////////// MISSION STATEMENT //////////////////////////////////////
+.mid {
+  background-color: #fff;
+}
+
+p {
+  font-size: 1rem;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  width: 90%;
+}
+
+.mission {
+  padding: 2rem;
+}
+
+.featured {
+  background-color: $color-primary;
+}

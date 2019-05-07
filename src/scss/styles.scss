@@ -3,102 +3,13 @@
 @import 'mixins';
 @import 'header';
 @import 'footer';
-@import './variables.scss';
 
 html {
   font-size: 10px;
 }
 
 body {
-  background-color: $color-primary-light;
-}
-
-/////////////////////// MAIN HEADER ////////////////////////////////////
-.list {
-  margin: 0 15px 0 12px;
-}
-
-li {
-  font-size: 1rem;
-}
-
-
-@media (max-width: 575.98px) {
-  .help-number {
-    font-size: .9rem !important;
-  }
-
-  .media-icons {
-    height: 22px !important;
-    width: 22px !important
-  }
-}
-
-/////////////////////// MAIN NAVBAR ////////////////////////////////////
-.navbar {
-  background-color: $color-primary;
-}
-
-.navbar-toggler-icon {
-  width: 3.2rem;
-  height: 3.2rem;
-}
-
-.nav-link {
-  color: #fff !important;
-}
-
-.nav-link:hover {
-  color: rgba(255, 255, 255, 0.5) !important;
-}
-
-@media (max-width: 575.98px) {
-  .btn-search {
-    margin: auto;
-    width: 100%;
-  }
-  .navbar-nav {
-    margin-bottom: 1.7rem;
-  }
-}
-
-.nav-item {
-  text-transform: uppercase;
-  font-size: 1.4rem;
-}
-
-.btn-search {
-  font-size: 1.6rem;
-  border-radius: 1rem;
-}
-
-.form-control {
-  font-size: 1.6rem;
-  border-radius: 1rem;
-}
-
-/////////////////////// MAIN ////////////////////////////////////
-.main {
-  //border: 1px dashed black;
-  margin-top: 7px;
-  padding: 1.6rem;
-
-  &__products {
-    //border: 1px solid black;
-  }
-
-  button {
-    color: #fff;
-    //color: rgba(255, 255, 255, 0.5);
-  }
-
-  button:hover {
-    text-decoration: none !important;
-  }
-
-  .card-header {
-    height: 4.8rem;
-  }
+  background-color: darkgrey; //$color-primary-light;
 }
 
 /////////////////////// SIDE NAVBAR ////////////////////////////////
@@ -141,8 +52,6 @@ li {
   //  .btn {
   //    font-size: .8rem;
   //  }
-
-
 }
 
 i {
@@ -150,74 +59,3 @@ i {
 }
 
 
-/////////////////////// MAIN CAROUSEL ////////////////////////////////
-
-
-.productInfo {
-  background-color: white;
-  border-radius: .5rem;
-}
-
-/////////////////////// FEATURED //////////////////////////////////////
-section {
-  border-radius: 1rem;
-}
-
-.featured {
-  border-radius: .5rem;
-
-  &__items {
-    font-size: 1.4rem;
-  }
-
-  &__body {
-    background-color: $color-primary;
-    border-radius: 0 0 .5rem .5rem;
-  }
-}
-
-
-/////////////////////// FOOTER //////////////////////////////////////
-.footer {
-  background-color: $color-primary-dark;
-  text-transform: uppercase;
-  padding: 5rem;
-  color: $color-link;
-
-  @media (min-width: 768px) {
-    li {
-      font-size: 1.2rem;
-    }
-  }
-  @media (max-width: 575.98px) {
-    li {
-      font-size: 1.2rem;
-    }
-  }
-}
-
-/////////////////////// MISSION STATEMENT //////////////////////////////////////
-
-.mid {
-  background-color: #fff;
-}
-
-p {
-  font-size: 1rem;
-}
-
-hr {
-  border: 0;
-  height: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  width: 90%;
-}
-
-.mission {
-  padding: 2rem;
-}
-
-.featured {
-  background-color: $color-primary;
-}

@@ -1,6 +1,5 @@
 import AntiStaticBags from '../../models/bagsModel/antiStaticBags.model';
 
-
 export default {
   findAll(req, res, next) {
     AntiStaticBags.find()
@@ -29,7 +28,7 @@ export default {
       .save()
       .then(result => {
         res.status(201).json({
-          message: "Employee added successfully",
+          message: "Product added successfully",
           bag: antiStaticBags
         });
       })
@@ -74,12 +73,11 @@ export default {
       weight: req.body.weight,
       bagPercase: req.body.bagPercase
     };
-    AntiStaticBags.updateOne({ _id: req.params.id }, editBag)
+    AntiStaticBags.updateMany({ _id: req.params.id }, editBag)
       .then(result => {
-        console.log(result);
         res.status(200).json({
           message: "Update Successful",
-          result: editBag
+          result: result
         });
       })
       .catch(error => {
@@ -90,13 +88,3 @@ export default {
       });
   }
 }
-
-
-
-
-
-
-
-
-
-
