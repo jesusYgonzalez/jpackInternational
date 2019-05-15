@@ -1,44 +1,43 @@
-import ClearPolyBags from '../../models/bagsModel/clearPolyBags.model';
+import ReclosableBags from '../../models/bagsModel/reclosableBags.model';
 
 export default {
   findAll(req, res) {
-    ClearPolyBags.find()
+    ReclosableBags.find()
       .then(bagDatabase => {
         res.status(200).json({
-          clearPolyBags: bagDatabase
+          reclosableBags: bagDatabase
         });
       })
       .catch(error => {
         res.status(500).json({
-          message: "Could not get the products!!",
+          message: "Could not get the product!!",
           error: error
         });
       });
   },
   create(req, res) {
-    const clearPolyBags = new ClearPolyBags({
+    const reclosableBags = new ReclosableBags({
       productNumber: req.body.productNumber,
       durability: req.body.durability,
       size: req.body.size,
       weight: req.body.weight,
       bagPercase: req.body.bagPercase
     });
-    clearPolyBags
-      .save()
+    reclosableBags.save()
       .then(result => {
         res.status(201).json({
           message: "Product added successfully",
-          bag: clearPolyBags
+          bag: reclosableBags
         });
       })
       .catch(error => {
         res.status(500).json({
-          message: "Couldn't save Product!!"
+          message: "Couldn't save product!!"
         });
       });
   },
   delete(req, res) {
-    ClearPolyBags.deleteOne({_id: req.params.id})
+    ReclosableBags.deleteOne({_id: req.params.id})
       .then(result => {
         res.status(200).json({message: "Product deleted!"});
       })
@@ -49,21 +48,16 @@ export default {
       });
   },
   findOne(req, res) {
-    ClearPolyBags.findById(req.params.id)
+    ReclosableBags.findOne(req.params.id)
       .then(bag => {
         if (bag) {
           res.status(200).json(bag);
         } else {
-          res.status(404).json({message: "Product not found!"});
+          res.status(404).json({message: "Product not found!"})
         }
-      })
-      .catch(error => {
-        res.status(500).json({
-          message: "Could not get Product!!"
-        });
       });
   },
-  update(req, res, next) {
+  update(req, res) {
     const editBag = {
       productNumber: req.body.productNumber,
       durability: req.body.durability,
@@ -71,7 +65,7 @@ export default {
       weight: req.body.weight,
       bagPercase: req.body.bagPercase
     };
-    ClearPolyBags.updateMany({_id: req.params.id}, editBag)
+    ReclosableBags.updateMany({_id: req.params.id}, editBag)
       .then(result => {
         res.status(200).json({
           message: "Update Successful",
@@ -79,10 +73,10 @@ export default {
         });
       })
       .catch(error => {
-        res.status(500).json({
+        res.status(200).json({
           message: "Could not update Product!!",
           error: error
-        });
-      });
+        })
+      })
   }
 }

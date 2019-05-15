@@ -1,7 +1,8 @@
 import mongoose from 'mongoose';
+
 const Schema = mongoose.Schema;
 
-const clearPolyBagsSchema = new Schema({
+const reclosableBagSchema = new Schema({
   productNumber: String,
   durability: String,
   size: String,
@@ -9,4 +10,4 @@ const clearPolyBagsSchema = new Schema({
   bagPercase: String
 });
 
-export default mongoose.model('ClearPolyBags', clearPolyBagsSchema);
+export default mongoose.model('ReclosableBags', reclosableBagSchema);

@@ -1,7 +1,7 @@
 import AntiStaticBags from '../../models/bagsModel/antiStaticBags.model';
 
 export default {
-  findAll(req, res, next) {
+  findAll(req, res) {
     AntiStaticBags.find()
       .then(bagDatabase => {
         res.status(200).json({
@@ -73,7 +73,7 @@ export default {
       weight: req.body.weight,
       bagPercase: req.body.bagPercase
     };
-    AntiStaticBags.updateMany({ _id: req.params.id }, editBag)
+    AntiStaticBags.updateMany({_id: req.params.id}, editBag)
       .then(result => {
         res.status(200).json({
           message: "Update Successful",
