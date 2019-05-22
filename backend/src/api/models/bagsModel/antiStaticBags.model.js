@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
@@ -10,4 +10,4 @@ const antiStaticBagsSchema = new Schema({
   bagPercase: String
 });
 
-export default mongoose.model('AntiStaticBags', antiStaticBagsSchema);
+export default mongoose.model("AntiStaticBags", antiStaticBagsSchema);

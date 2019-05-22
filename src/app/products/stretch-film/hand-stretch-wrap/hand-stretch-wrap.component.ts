@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-hand-stretch-wrap',
-  templateUrl: './hand-stretch-wrap.component.html',
-  styleUrls: ['./hand-stretch-wrap.component.scss']
+  selector: "app-hand-stretch-wrap",
+  templateUrl: "./hand-stretch-wrap.component.html",
+  styleUrls: ["./hand-stretch-wrap.component.scss"]
 })
 export class HandStretchWrapComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

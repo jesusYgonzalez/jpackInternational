@@ -1,4 +1,4 @@
-import BubblePouches from '../../models/bagsModel/bubblePouches.model';
+import BubblePouches from "../../models/bagsModel/bubblePouches.model";
 
 export default {
   findAll(req, res) {
@@ -33,15 +33,16 @@ export default {
       })
       .catch(error => {
         res.status(500).json({
-          message: "Couldn't save Product!!"
+          message: "Couldn't save Product!!",
+          error: error
         });
       });
   },
   delete(req, res) {
-    BubblePouches.deleteOne({_id: req.params.id})
+    BubblePouches.deleteOne({ _id: req.params.id })
       .then(result => {
         console.log(result);
-        res.status(200).json({message: "Product deleted!"});
+        res.status(200).json({ message: "Product deleted!" });
       })
       .catch(error => {
         res.status(500).json({
@@ -55,12 +56,13 @@ export default {
         if (bag) {
           res.status(200).json(bag);
         } else {
-          res.status(404).json({message: "Product not found!"});
+          res.status(404).json({ message: "Product not found!" });
         }
       })
       .catch(error => {
         res.status(500).json({
-          message: "Could not get Product!!"
+          message: "Could not get Product!!",
+          error: error
         });
       });
   },
@@ -85,4 +87,4 @@ export default {
         });
       });
   }
-}
+};

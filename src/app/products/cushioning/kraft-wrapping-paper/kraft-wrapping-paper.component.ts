@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-kraft-wrapping-paper',
-  templateUrl: './kraft-wrapping-paper.component.html',
-  styleUrls: ['./kraft-wrapping-paper.component.scss']
+  selector: "app-kraft-wrapping-paper",
+  templateUrl: "./kraft-wrapping-paper.component.html",
+  styleUrls: ["./kraft-wrapping-paper.component.scss"]
 })
 export class KraftWrappingPaperComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

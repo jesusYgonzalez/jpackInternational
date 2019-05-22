@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const clearPolyBagsSchema = new Schema({
@@ -9,4 +9,4 @@ const clearPolyBagsSchema = new Schema({
   bagPercase: String
 });
 
-export default mongoose.model('ClearPolyBags', clearPolyBagsSchema);
+export default mongoose.model("ClearPolyBags", clearPolyBagsSchema);

@@ -1,4 +1,4 @@
-import ClearPolyBags from '../../models/bagsModel/clearPolyBags.model';
+import ClearPolyBags from "../../models/bagsModel/clearPolyBags.model";
 
 export default {
   findAll(req, res) {
@@ -38,9 +38,9 @@ export default {
       });
   },
   delete(req, res) {
-    ClearPolyBags.deleteOne({_id: req.params.id})
+    ClearPolyBags.deleteOne({ _id: req.params.id })
       .then(result => {
-        res.status(200).json({message: "Product deleted!"});
+        res.status(200).json({ message: "Product deleted!" });
       })
       .catch(error => {
         res.status(500).json({
@@ -54,7 +54,7 @@ export default {
         if (bag) {
           res.status(200).json(bag);
         } else {
-          res.status(404).json({message: "Product not found!"});
+          res.status(404).json({ message: "Product not found!" });
         }
       })
       .catch(error => {
@@ -71,7 +71,7 @@ export default {
       weight: req.body.weight,
       bagPercase: req.body.bagPercase
     };
-    ClearPolyBags.updateMany({_id: req.params.id}, editBag)
+    ClearPolyBags.updateMany({ _id: req.params.id }, editBag)
       .then(result => {
         res.status(200).json({
           message: "Update Successful",
@@ -85,4 +85,4 @@ export default {
         });
       });
   }
-}
+};

@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
@@ -10,4 +10,4 @@ const reclosableBagSchema = new Schema({
   bagPercase: String
 });
 
-export default mongoose.model('ReclosableBags', reclosableBagSchema);
+export default mongoose.model("ReclosableBags", reclosableBagSchema);

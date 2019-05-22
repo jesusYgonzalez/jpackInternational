@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-clear-poly-bags',
-  templateUrl: './clear-poly-bags.component.html',
-  styleUrls: ['./clear-poly-bags.component.scss']
+  selector: "app-clear-poly-bags",
+  templateUrl: "./clear-poly-bags.component.html",
+  styleUrls: ["./clear-poly-bags.component.scss"]
 })
 export class ClearPolyBagsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

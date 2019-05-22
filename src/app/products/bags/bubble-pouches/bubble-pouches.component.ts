@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-bubble-pouches',
-  templateUrl: './bubble-pouches.component.html',
-  styleUrls: ['./bubble-pouches.component.scss']
+  selector: "app-bubble-pouches",
+  templateUrl: "./bubble-pouches.component.html",
+  styleUrls: ["./bubble-pouches.component.scss"]
 })
 export class BubblePouchesComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

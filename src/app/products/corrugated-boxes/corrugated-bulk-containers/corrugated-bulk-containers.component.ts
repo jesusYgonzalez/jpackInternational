@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-corrugated-bulk-containers',
-  templateUrl: './corrugated-bulk-containers.component.html',
-  styleUrls: ['./corrugated-bulk-containers.component.scss']
+  selector: "app-corrugated-bulk-containers",
+  templateUrl: "./corrugated-bulk-containers.component.html",
+  styleUrls: ["./corrugated-bulk-containers.component.scss"]
 })
 export class CorrugatedBulkContainersComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

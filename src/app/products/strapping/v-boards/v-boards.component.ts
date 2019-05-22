@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-v-boards',
-  templateUrl: './v-boards.component.html',
-  styleUrls: ['./v-boards.component.scss']
+  selector: "app-v-boards",
+  templateUrl: "./v-boards.component.html",
+  styleUrls: ["./v-boards.component.scss"]
 })
 export class VBoardsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

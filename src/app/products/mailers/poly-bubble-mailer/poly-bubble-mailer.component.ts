@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-poly-bubble-mailer',
-  templateUrl: './poly-bubble-mailer.component.html',
-  styleUrls: ['./poly-bubble-mailer.component.scss']
+  selector: "app-poly-bubble-mailer",
+  templateUrl: "./poly-bubble-mailer.component.html",
+  styleUrls: ["./poly-bubble-mailer.component.scss"]
 })
 export class PolyBubbleMailerComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
