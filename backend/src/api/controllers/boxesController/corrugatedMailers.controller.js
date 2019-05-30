@@ -1,8 +1,8 @@
-const CorrugatedPads = require("../../models/boxesModel/corrugatedPads.model");
+const CorrugatedMailers = require("../../models/boxesModel/corrugatedMailers.model");
 
 module.exports = {
   findAll(req, res) {
-    CorrugatedPads.find()
+    CorrugatedMailers.find()
       .then(result => {
         res.status(200).json({
           message: "products fetched successfully!!",
@@ -17,13 +17,13 @@ module.exports = {
       });
   },
   create(req, res) {
-    const corrugatedPads = new CorrugatedPads({
-      dimensionsLW: req.body.dimensionsLW,
+    const corrugatedMailers = new CorrugatedMailers({
+      insideDimensions: req.body.insideDimensions,
       style: req.body.style,
       numberPerBundle: req.body.numberPerBundle,
       numberPerPallet: req.body.numberPerPallet
     });
-    corrugatedPads
+    corrugatedMailers
       .save()
       .then(result => {
         res.status(201).json({
@@ -39,7 +39,7 @@ module.exports = {
       });
   },
   delete(req, res) {
-    CorrugatedPads.deleteOne({ _id: req.params.id })
+    CorrugatedMailers.deleteOne({ _id: req.params.id })
       .then(result => {
         console.log(result);
         res.status(200).json({ message: "Product deleted!" });
@@ -52,7 +52,7 @@ module.exports = {
       });
   },
   findOne(req, res) {
-    CorrugatedPads.findById(req.params.id)
+    CorrugatedMailers.findById(req.params.id)
       .then(box => {
         if (box) {
           res.status(200).json(box);
@@ -69,12 +69,12 @@ module.exports = {
   },
   update(req, res) {
     const editBox = {
-      dimensionsLW: req.body.dimensionsLW,
+      insideDimensions: req.body.insideDimensions,
       style: req.body.style,
       numberPerBundle: req.body.numberPerBundle,
       numberPerPallet: req.body.numberPerPallet
     };
-    CorrugatedPads.updateMany({ _id: req.params.id }, editBox)
+    CorrugatedMailers.updateMany({ _id: req.params.id }, editBox)
       .then(result => {
         res.status(200).json({
           message: "Update Successful",

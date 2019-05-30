@@ -1,12 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
-import { SideNavComponent } from './core/side-nav/side-nav.component';
-import { ProductsComponent } from './products/products.component';
 import { AntiStaticBagsComponent } from './products/bags/anti-static-bags/anti-static-bags.component';
 import { AntiStaticBagsListComponent } from './products/bags/anti-static-bags/anti-static-bags-list/anti-static-bags-list.component';
 import { BubblePouchesComponent } from './products/bags/bubble-pouches/bubble-pouches.component';
@@ -16,8 +14,6 @@ import { ClearPolyBagsListComponent } from './products/bags/clear-poly-bags/clea
 import { ClearReclosableBagsComponent } from './products/bags/clear-reclosable-bags/clear-reclosable-bags.component';
 // tslint:disable-next-line:max-line-length
 import { ClearReclosableBagsListComponent } from './products/bags/clear-reclosable-bags/clear-reclosable-bags-list/clear-reclosable-bags-list.component';
-import { PolyBagSealerComponent } from './products/bags/poly-bag-sealer/poly-bag-sealer.component';
-import { PolyBagSealerListComponent } from './products/bags/poly-bag-sealer/poly-bag-sealer-list/poly-bag-sealer-list.component';
 import { PolypropyleneBagsComponent } from './products/bags/polypropylene-bags/polypropylene-bags.component';
 // tslint:disable-next-line:max-line-length
 import { PolypropyleneBagsListComponent } from './products/bags/polypropylene-bags/polypropylene-bags-list/polypropylene-bags-list.component';
@@ -88,14 +84,19 @@ import { GlovesMasksComponent } from './products/misc/gloves-masks/gloves-masks.
 import { MetalTruckSealComponent } from './products/misc/metal-truck-seal/metal-truck-seal.component';
 import { ShippingScalesComponent } from './products/misc/shipping-scales/shipping-scales.component';
 import { TwistTiesComponent } from './products/misc/twist-ties/twist-ties.component';
+import { AboutComponent } from './navbar/about/about.component';
+import { DeliveryComponent } from './navbar/delivery/delivery.component';
+import { ContactUsComponent } from './navbar/contact-us/contact-us.component';
+import { QuotationComponent } from './navbar/quotation/quotation.component';
+import { OrderOnlineComponent } from './navbar/order-online/order-online.component';
+import { HomeComponent } from './navbar/home/home.component';
+import { MDBBootstrapModule, MDBRootModule, WavesModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    SideNavComponent,
-    ProductsComponent,
     AntiStaticBagsComponent,
     AntiStaticBagsListComponent,
     BubblePouchesComponent,
@@ -104,8 +105,6 @@ import { TwistTiesComponent } from './products/misc/twist-ties/twist-ties.compon
     ClearPolyBagsListComponent,
     ClearReclosableBagsComponent,
     ClearReclosableBagsListComponent,
-    PolyBagSealerComponent,
-    PolyBagSealerListComponent,
     PolypropyleneBagsComponent,
     PolypropyleneBagsListComponent,
     PolyTubingComponent,
@@ -171,12 +170,22 @@ import { TwistTiesComponent } from './products/misc/twist-ties/twist-ties.compon
     GlovesMasksComponent,
     MetalTruckSealComponent,
     ShippingScalesComponent,
-    TwistTiesComponent
+    TwistTiesComponent,
+    AboutComponent,
+    DeliveryComponent,
+    ContactUsComponent,
+    QuotationComponent,
+    OrderOnlineComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    WavesModule,
+    MDBRootModule,
+    MDBBootstrapModule.forRoot()
   ],
+  schemas: [ NO_ERRORS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
