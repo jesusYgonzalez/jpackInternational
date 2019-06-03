@@ -1,4 +1,4 @@
-const PolyBagSealer = require("../../models/bagsModel/polyBagSealer.model");
+const PolyBagSealer = require("../../models/bagsModel/bags.model");
 
 module.exports = {
   findAll(req, res) {

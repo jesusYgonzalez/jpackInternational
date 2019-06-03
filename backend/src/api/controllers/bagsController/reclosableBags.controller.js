@@ -1,6 +1,6 @@
-import ReclosableBags from "../../models/bagsModel/reclosableBags.model";
+const ReclosableBags = require( "../../models/bagsModel/bags.model");
 
-export default {
+module.exports = {
   findAll(req, res) {
     ReclosableBags.find()
       .then(bagDatabase => {

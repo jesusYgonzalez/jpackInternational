@@ -1,6 +1,6 @@
-import AntiStaticBags from "../../models/bagsModel/antiStaticBags.model";
+const AntiStaticBags = require("../../models/bagsModel/bags.model");
 
-export default {
+module.exports = {
   findAll(req, res) {
     AntiStaticBags.find()
       .then(bagDatabase => {

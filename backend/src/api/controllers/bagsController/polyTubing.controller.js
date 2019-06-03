@@ -1,4 +1,4 @@
-const PolyTubing = require("../../models/bagsModel/polyTubing.model");
+const PolyTubing = require("../../models/bagsModel/bags.model");
 
 module.exports = {
   findAll(req, res) {

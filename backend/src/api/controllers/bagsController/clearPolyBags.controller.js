@@ -1,6 +1,6 @@
-import ClearPolyBags from "../../models/bagsModel/clearPolyBags.model";
+const ClearPolyBags = require("../../models/bagsModel/bags.model");
 
-export default {
+module.exports = {
   findAll(req, res) {
     ClearPolyBags.find()
       .then(bagDatabase => {

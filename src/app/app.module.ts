@@ -90,7 +90,33 @@ import { ContactUsComponent } from './navbar/contact-us/contact-us.component';
 import { QuotationComponent } from './navbar/quotation/quotation.component';
 import { OrderOnlineComponent } from './navbar/order-online/order-online.component';
 import { HomeComponent } from './navbar/home/home.component';
-import { MDBBootstrapModule, MDBRootModule, WavesModule } from 'angular-bootstrap-md';
+
+import { MDBBootstrapModulesPro } from 'ng-uikit-pro-standard';
+import { MDBSpinningPreloader } from 'ng-uikit-pro-standard';
+import { AgmCoreModule } from '@agm/core';
+
+import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+declare var Hammer: any;
+
+export class MyHammerConfig extends HammerGestureConfig {
+  overrides = <any> {
+    'pan': { direction: Hammer.DIRECTION_All },
+    'swipe': { direction: Hammer.DIRECTION_VERTICAL },
+  };
+
+  buildHammer(element: HTMLElement) {
+    const mc = new Hammer(element, {
+      touchAction: 'auto',
+      inputClass: Hammer.SUPPORT_POINTER_EVENTS ? Hammer.PointerEventInput : Hammer.TouchInput,
+      recognizers: [
+        [Hammer.Swipe, {
+          direction: Hammer.DIRECTION_HORIZONTAL
+        }]
+      ]
+    });
+    return mc;
+  }
+}
 
 @NgModule({
   declarations: [
@@ -181,12 +207,17 @@ import { MDBBootstrapModule, MDBRootModule, WavesModule } from 'angular-bootstra
   imports: [
     BrowserModule,
     AppRoutingModule,
-    WavesModule,
-    MDBRootModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModulesPro.forRoot(),
+    AgmCoreModule.forRoot({ apiKey: 'WnjuyWEc6tJRrLZyVdP9' })
   ],
   schemas: [ NO_ERRORS_SCHEMA],
-  providers: [],
+  providers: [
+    MDBSpinningPreloader,
+    {
+      provide: HAMMER_GESTURE_CONFIG,
+      useClass: MyHammerConfig
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

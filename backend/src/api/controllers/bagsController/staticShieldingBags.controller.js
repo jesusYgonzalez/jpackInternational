@@ -1,4 +1,4 @@
-const StaticShieldingBag = require("../../models/bagsModel/staticShieldingBags.model");
+const StaticShieldingBag = require("../../models/bagsModel/bags.model");
 
 module.exports = {
   findAll(req, res) {

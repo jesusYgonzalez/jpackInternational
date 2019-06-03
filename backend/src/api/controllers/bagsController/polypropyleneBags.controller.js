@@ -1,4 +1,4 @@
-const PolypropyleneBags = require("../../models/bagsModel/polypropyleneBags.model");
+const PolypropyleneBags = require("../../models/bagsModel/bags.model");
 
 module.exports = {
   findAll(req, res) {

@@ -32,3 +32,7 @@ app.use((error, req, res, next) => {
 
 //SERVER
 app.listen(3000, () => console.log("server running on port: 3000"));
+
+
+// MDB token
+// WnjuyWEc6tJRrLZyVdP9

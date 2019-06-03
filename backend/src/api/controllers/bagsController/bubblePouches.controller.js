@@ -1,6 +1,6 @@
-import BubblePouches from "../../models/bagsModel/bubblePouches.model";
+const BubblePouches = require("../../models/bagsModel/bags.model");
 
-export default {
+module.exports = {
   findAll(req, res) {
     BubblePouches.find()
       .then(bagDatabase => {

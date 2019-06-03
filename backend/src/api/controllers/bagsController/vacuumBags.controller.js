@@ -1,4 +1,4 @@
-const VacuumBags = require("../../models/bagsModel/vacuumBags.model");
+const VacuumBags = require("../../models/bagsModel/bags.model");
 
 module.exports = {
   findAll(req, res) {
