@@ -1,9 +1,8 @@
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { AntiStaticBagsComponent } from './products/bags/anti-static-bags/anti-static-bags.component';
 import { AntiStaticBagsListComponent } from './products/bags/anti-static-bags/anti-static-bags-list/anti-static-bags-list.component';
@@ -91,37 +90,15 @@ import { QuotationComponent } from './navbar/quotation/quotation.component';
 import { OrderOnlineComponent } from './navbar/order-online/order-online.component';
 import { HomeComponent } from './navbar/home/home.component';
 
+// MD BOOTSTRAP //
 import { MDBBootstrapModulesPro } from 'ng-uikit-pro-standard';
 import { MDBSpinningPreloader } from 'ng-uikit-pro-standard';
-import { AgmCoreModule } from '@agm/core';
-
-import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
-declare var Hammer: any;
-
-export class MyHammerConfig extends HammerGestureConfig {
-  overrides = <any> {
-    'pan': { direction: Hammer.DIRECTION_All },
-    'swipe': { direction: Hammer.DIRECTION_VERTICAL },
-  };
-
-  buildHammer(element: HTMLElement) {
-    const mc = new Hammer(element, {
-      touchAction: 'auto',
-      inputClass: Hammer.SUPPORT_POINTER_EVENTS ? Hammer.PointerEventInput : Hammer.TouchInput,
-      recognizers: [
-        [Hammer.Swipe, {
-          direction: Hammer.DIRECTION_HORIZONTAL
-        }]
-      ]
-    });
-    return mc;
-  }
-}
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SidebarComponent } from './core/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     FooterComponent,
     AntiStaticBagsComponent,
     AntiStaticBagsListComponent,
@@ -202,22 +179,17 @@ export class MyHammerConfig extends HammerGestureConfig {
     ContactUsComponent,
     QuotationComponent,
     OrderOnlineComponent,
-    HomeComponent
+    HomeComponent,
+    SidebarComponent,
+
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    MDBBootstrapModulesPro.forRoot(),
-    AgmCoreModule.forRoot({ apiKey: 'WnjuyWEc6tJRrLZyVdP9' })
+    MDBBootstrapModulesPro.forRoot()
   ],
-  schemas: [ NO_ERRORS_SCHEMA],
-  providers: [
-    MDBSpinningPreloader,
-    {
-      provide: HAMMER_GESTURE_CONFIG,
-      useClass: MyHammerConfig
-    }
-  ],
+  providers: [MDBSpinningPreloader],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

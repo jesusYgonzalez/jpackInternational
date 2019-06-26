@@ -1,0 +1,49 @@
+@import "~node_modules/rfs/scss";
+//
+///////////////
+//// Theming //
+///////////////
+//html {
+//  background: #DDD;
+//}
+//
+//body {
+//  max-width: 1200px;
+//  padding: 20px;
+//  margin: 0 auto;
+//  line-height: 1.2;
+//}
+//
+//.title{
+//  @include font-size(4rem);
+//  margin: 0 0 .5em;
+//}
+//
+//.article{
+//  background: white;
+//  box-shadow: 0 0 10px rgba(black, .25);
+//  padding: 20px 25px;
+//
+//  &:not(:first-of-type){
+//    margin-top: 20px;
+//  }
+//
+//  &__title{
+//    @include font-size(27px);
+//    margin: 0;
+//  }
+//
+//  &__date{
+//    padding-top: .25em;
+//    @include font-size(12px);
+//    opacity: .75;
+//    font-style: italic;
+//  }
+//
+//  &__content{
+//    padding-top: .75em;
+//    @include font-size(16px);
+//    margin: 0;
+//    line-height: 1.4;
+//  }
+//}

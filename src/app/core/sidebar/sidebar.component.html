@@ -1,0 +1,305 @@
+<!--Double navigation-->
+<header>
+  <!-- Sidebar navigation -->
+  <mdb-side-nav
+    #sidenav
+    class="sn-bg-1 fixed"
+    [sidenavBreakpoint]="992"
+    [fixed]="true"
+  >
+    <mdb-navbar-brand>
+      <!-- Logo -->
+      <li>
+        <div class="logo-wrapper waves-light">
+          <a href="#"
+            ><img
+              src="../../../assets/img/jpack-logo.jpg"
+              class="img-fluid flex-center"
+          /></a>
+        </div>
+      </li>
+      <!--/. Logo -->
+    </mdb-navbar-brand>
+
+    <links>
+      <!--Social-->
+      <li>
+        <ul class="social">
+          <li>
+            <a class="icons-sm fb-ic"><i class="fab fa-facebook-f"> </i></a>
+          </li>
+          <li>
+            <a class="icons-sm pin-ic"><i class="fab fa-pinterest"> </i></a>
+          </li>
+          <li>
+            <a class="icons-sm gplus-ic"><i class="fab fa-google-plus"> </i></a>
+          </li>
+          <li>
+            <a class="icons-sm tw-ic"><i class="fab fa-twitter"> </i></a>
+          </li>
+        </ul>
+      </li>
+      <!--/Social-->
+      <!--Search Form-->
+      <li>
+        <form class="search-form" role="search">
+          <div class="form-group md-form mt-0 pt-1 waves-light" mdbWavesEffect>
+            <input type="text" class="form-control" placeholder="Search" />
+          </div>
+        </form>
+      </li>
+      <!--/.Search Form-->
+      <!-- Side navigation links -->
+      <li>
+        <ul
+          class="collapsible collapsible-accordion"
+          style="max-height: 100vh; padding-bottom: 100px"
+        >
+          <mdb-accordion [multiple]="false" aria-multiselectable="false">
+            <!-- Collapsible link -->
+
+            <mdb-accordion-item>
+              <mdb-accordion-item-head mdbWavesEffect
+                ><i class="fas fa-shopping-bag"></i>BAGS
+              </mdb-accordion-item-head>
+              <mdb-accordion-item-body>
+                <ul>
+                  <li><a href="#" mdbWavesEffect>Anti Static Bags</a></li>
+                  <li><a href="#" mdbWavesEffect>Bubble Pouches</a></li>
+                  <li><a href="#" mdbWavesEffect>Clear Poly Bags</a></li>
+                  <li><a href="#" mdbWavesEffect>Poly Bag Sealer</a></li>
+                  <li><a href="#" mdbWavesEffect>Polypropylene Bags</a></li>
+                  <li><a href="#" mdbWavesEffect>Poly Tubing</a></li>
+                  <li><a href="#" mdbWavesEffect>Reclosable Bags</a></li>
+                  <li><a href="#" mdbWavesEffect>Static Shielding Bags</a></li>
+                  <li><a href="#" mdbWavesEffect>Vacuum Bags</a></li>
+                </ul>
+              </mdb-accordion-item-body>
+            </mdb-accordion-item>
+
+            <mdb-accordion-item>
+              <mdb-accordion-item-head mdbWavesEffect
+                ><i class="fas fa-box-open"></i>CORRUGATED BOXES
+              </mdb-accordion-item-head>
+              <mdb-accordion-item-body>
+                <ul>
+                  <li><a href="#" mdbWavesEffect>Box Stapler & Staples</a></li>
+                  <li><a href="#" mdbWavesEffect>Corrugated Boxes</a></li>
+                  <li>
+                    <a href="#" mdbWavesEffect>Corrugated Bulk Containers</a>
+                  </li>
+                  <li><a href="#" mdbWavesEffect>Corrugated Pads</a></li>
+                  <li><a href="#" mdbWavesEffect>Corrugated Mailers</a></li>
+                  <li><a href="#" mdbWavesEffect>Easy Fold Boxes</a></li>
+                  <li><a href="#" mdbWavesEffect>Mailing Tubes</a></li>
+                </ul>
+              </mdb-accordion-item-body>
+            </mdb-accordion-item>
+
+            <mdb-accordion-item>
+              <mdb-accordion-item-head mdbWavesEffect
+                ><i class="fas fa-database"></i>CUSHIONING
+              </mdb-accordion-item-head>
+              <mdb-accordion-item-body>
+                <ul>
+                  <li><a href="#" mdbWavesEffect>Bubble Wrap</a></li>
+                  <li>
+                    <a href="#" mdbWavesEffect>Bubble Wrap & Foam Dispenser</a>
+                  </li>
+                  <li><a href="#" mdbWavesEffect>Cushioning Foam</a></li>
+                  <li><a href="#" mdbWavesEffect>Kraft Wrapping Paper</a></li>
+                  <li><a href="#" mdbWavesEffect>Mini Air System</a></li>
+                  <li>
+                    <a href="#" mdbWavesEffect>Newsprint Wrapping Paper</a>
+                  </li>
+                  <li><a href="#" mdbWavesEffect>Packing Peanuts</a></li>
+                  <li><a href="#" mdbWavesEffect>Tissue Wrapping Paper</a></li>
+                  <li>
+                    <a href="#" mdbWavesEffect>Wrapping Paper Dispenser</a>
+                  </li>
+                </ul>
+              </mdb-accordion-item-body>
+            </mdb-accordion-item>
+
+            <mdb-accordion-item>
+              <mdb-accordion-item-head mdbWavesEffect
+                ><i class="fas fa-envelope"></i>LABELS & ENVELOPES
+              </mdb-accordion-item-head>
+              <mdb-accordion-item-body>
+                <ul>
+                  <li><a href="#" mdbWavesEffect>Circle Mailing Labels</a></li>
+                  <li><a href="#" mdbWavesEffect>Laser Labels</a></li>
+                  <li><a href="#" mdbWavesEffect>Packing List Envelopes</a></li>
+                  <li>
+                    <a href="#" mdbWavesEffect>Shipping & Handling Labels</a>
+                  </li>
+                  <li><a href="#" mdbWavesEffect>Thermal Transfer</a></li>
+                </ul>
+              </mdb-accordion-item-body>
+            </mdb-accordion-item>
+
+            <mdb-accordion-item>
+              <mdb-accordion-item-head mdbWavesEffect
+                ><i class="fas fa-mail-bulk"></i>MAILERS
+              </mdb-accordion-item-head>
+              <mdb-accordion-item-body>
+                <ul>
+                  <li><a href="#" mdbWavesEffect>Kraft Bubble Mailer</a></li>
+                  <li><a href="#" mdbWavesEffect>Poly Bubble Mailer</a></li>
+                  <li><a href="#" mdbWavesEffect>Poly Mailer</a></li>
+                </ul>
+              </mdb-accordion-item-body>
+            </mdb-accordion-item>
+
+            <mdb-accordion-item>
+              <mdb-accordion-item-head mdbWavesEffect
+                ><i class="fas fa-crop-alt"></i>STRAPPING
+              </mdb-accordion-item-head>
+              <mdb-accordion-item-body>
+                <ul>
+                  <li><a href="#" mdbWavesEffect>Poly Strapping</a></li>
+                  <li><a href="#" mdbWavesEffect>Poly Strapping Machine</a></li>
+                  <li><a href="#" mdbWavesEffect>Poly Strapping Tools</a></li>
+                  <li><a href="#" mdbWavesEffect>Steel Strapping</a></li>
+                  <li><a href="#" mdbWavesEffect>V-Boards</a></li>
+                </ul>
+              </mdb-accordion-item-body>
+            </mdb-accordion-item>
+
+            <mdb-accordion-item>
+              <mdb-accordion-item-head mdbWavesEffect
+                ><i class="fas fa-scroll"></i>STRETCH FILM
+              </mdb-accordion-item-head>
+              <mdb-accordion-item-body>
+                <ul>
+                  <li><a href="#" mdbWavesEffect>Hand Stretch Wrap</a></li>
+                  <li><a href="#" mdbWavesEffect>Machine Stretch Wrap</a></li>
+                  <li><a href="#" mdbWavesEffect>Opaque Stretch Wrap</a></li>
+                  <li><a href="#" mdbWavesEffect>Stretch Wrap Dispenser</a></li>
+                  <li><a href="#" mdbWavesEffect>Stretch Wrap Machinery</a></li>
+                  <li><a href="#" mdbWavesEffect>Shrink Wrap Roll</a></li>
+                  <li><a href="#" mdbWavesEffect>Shrink Wrap System</a></li>
+                </ul>
+              </mdb-accordion-item-body>
+            </mdb-accordion-item>
+
+            <mdb-accordion-item>
+              <mdb-accordion-item-head mdbWavesEffect
+                ><i class="fas fa-tape"></i>TAPE
+              </mdb-accordion-item-head>
+              <mdb-accordion-item-body>
+                <ul>
+                  <li><a href="#" mdbWavesEffect>Carton Sealing Tape</a></li>
+                  <li><a href="#" mdbWavesEffect>Colored Tape</a></li>
+                  <li><a href="#" mdbWavesEffect>Custom Print Tape</a></li>
+                  <li><a href="#" mdbWavesEffect>Filament Tape</a></li>
+                  <li><a href="#" mdbWavesEffect>Masking Tape</a></li>
+                  <li>
+                    <a href="#" mdbWavesEffect>Office Tape & Dispenser</a>
+                  </li>
+                  <li><a href="#" mdbWavesEffect>Tape Dispenser</a></li>
+                  <li><a href="#" mdbWavesEffect>Vinyl Tape</a></li>
+                  <li>
+                    <a href="#" mdbWavesEffect>Water-Activated Gummed Tape</a>
+                  </li>
+                </ul>
+              </mdb-accordion-item-body>
+            </mdb-accordion-item>
+
+            <mdb-accordion-item>
+              <mdb-accordion-item-head mdbWavesEffect
+                ><i class="fas fa-tools"></i>TOOLS & MACHINES
+              </mdb-accordion-item-head>
+              <mdb-accordion-item-body>
+                <ul>
+                  <li><a href="#" mdbWavesEffect>Air Pillow Machine</a></li>
+                  <li><a href="#" mdbWavesEffect>Box Stapler</a></li>
+                  <li><a href="#" mdbWavesEffect>Bubble Wrap Dispenser</a></li>
+                  <li><a href="#" mdbWavesEffect>Glue Gun</a></li>
+                  <li><a href="#" mdbWavesEffect>Poly Bag Sealer</a></li>
+                  <li><a href="#" mdbWavesEffect>Poly Strapping Machine</a></li>
+                  <li><a href="#" mdbWavesEffect>Poly Tubing Dispenser</a></li>
+                  <li><a href="#" mdbWavesEffect>Stretch Wrap Machine</a></li>
+                  <li><a href="#" mdbWavesEffect>Shrink Wrap System</a></li>
+                  <li><a href="#" mdbWavesEffect>Tape Dispenser</a></li>
+                  <li><a href="#" mdbWavesEffect>Utility Knife</a></li>
+                  <li>
+                    <a href="#" mdbWavesEffect>Wrapping Paper Dispenser</a>
+                  </li>
+                </ul>
+              </mdb-accordion-item-body>
+            </mdb-accordion-item>
+
+            <mdb-accordion-item>
+              <mdb-accordion-item-head mdbWavesEffect
+                ><i class="fas fa-random"></i>MISC
+              </mdb-accordion-item-head>
+              <mdb-accordion-item-body>
+                <ul>
+                  <li><a href="#" mdbWavesEffect>Cable Ties</a></li>
+                  <li><a href="#" mdbWavesEffect>Dock Board</a></li>
+                  <li><a href="#" mdbWavesEffect>Gloves & Masks</a></li>
+                  <li><a href="#" mdbWavesEffect>Metal Truck Seal</a></li>
+                  <li><a href="#" mdbWavesEffect>Shipping Scales</a></li>
+                  <li><a href="#" mdbWavesEffect>Twist Ties</a></li>
+                </ul>
+              </mdb-accordion-item-body>
+            </mdb-accordion-item>
+          </mdb-accordion>
+        </ul>
+      </li>
+      <!--/. Side navigation links -->
+    </links>
+    <div class="sidenav-bg mask-strong"></div>
+  </mdb-side-nav>
+  <!--/. Sidebar navigation -->
+
+  <!-- Navbar -->
+  <mdb-navbar
+    SideClass="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav"
+    [containerInside]="false"
+  >
+    <navlinks class="navbar-container">
+      <!-- SideNav slide-out button -->
+      <div class="float-left">
+        <a (click)="sidenav.show()" class="button-collapse"
+          ><i class="fas fa-bars"></i
+        ></a>
+      </div>
+      <!--/. SideNav slide-out button -->
+    </navlinks>
+
+    <mdb-navbar-brand>
+      <!-- Breadcrumb-->
+      <div class="breadcrumbs breadcrumb-dn mr-auto"></div>
+      <!--/. Breadcrumb-->
+    </mdb-navbar-brand>
+
+    <navlinks>
+      <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect
+            ><i class="fas fa-envelope"></i>
+            <span class="clearfix d-none d-sm-inline-block">Contact</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect
+            ><i class="far fa-comments"></i>
+            <span class="clearfix d-none d-sm-inline-block">Support</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect
+            ><i class="fas fa-user"></i>
+            <span class="clearfix d-none d-sm-inline-block">Delivery</span></a
+          >
+        </li>
+      </ul>
+    </navlinks>
+  </mdb-navbar>
+  <!--/. Navbar -->
+</header>
+<!--/.Double navigation-->
+
+<!--Main layout-->

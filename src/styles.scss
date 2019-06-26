@@ -1,269 +1,179 @@
-///* You can add global styles to this file, and also import other style files */
-//@import "scss/variables";
-//@import "scss/mixins";
-//@import "scss/header";
-//@import "scss/footer";
-//
-//$color-primary: #0c4b7d;
-//$color-primary-light: #eaeded;
-//$color-primary-dark: #252525;
-//$color-link: rgba(255, 255, 255, 0.5);
-//
-////nice blue color #0088cc;
-//
-////html {
-////  font-size: 10px;
-////}
-//
-//body {
-//  background-color: darkgrey; //$color-primary-light;
-//}
-//
-///////////////////////// SIDE NAVBAR ////////////////////////////////
-//.accordionNav {
-//  .card-header {
-//    height: 4rem !important;
-//  }
-//
-//  &__list {
-//    list-style: none;
-//    cursor: pointer;
-//    padding: 0 !important;
-//    text-transform: uppercase;
-//  }
-//
-//  .btn {
-//    font-size: 1.3rem;
-//    color: $color-primary-dark;
-//  }
-//
-//  .card-header {
-//    cursor: pointer;
-//  }
-//
-//  a {
-//    text-decoration: none;
-//    color: $color-primary;
-//    font-size: 1.2rem;
-//  }
-//
-//  a:hover {
-//    color: $color-primary;
-//  }
-//
-//  .card {
-//    border: 0;
-//  }
-//
-//  //@media screen and (-webkit-max-device-pixel-ratio: 1) {
-//  //  .btn {
-//  //    font-size: .8rem;
-//  //  }
-//}
-//
-//i {
-//  opacity: 0.5;
-//}
-//
-//@import 'scss/variables';
-//
-//
-//html {
-//  font-size: 10px;
-//}
-//
-//body {
-//  background-color: $color-primary-light;
-//}
-//
-///////////////////////// MAIN HEADER ////////////////////////////////////
-//.vertical-line {
-//  width: 1px;
-//  background-color: black;
-//  height: 100%;
-//  float: left;
-//  opacity: 0.1;
-//}
-//
-//.icon-header {
-//  margin-left: 5px;
-//  display: flex;
-//  align-items: center;
-//  justify-content: center;
-//  opacity: .7;
-//  color: $color-primary;
-//}
-//
-//.main-link {
-//  color: black;
-//}
-//
-//.list {
-//  margin: 0 15px 0 12px;
-//}
-//
-//
-//@media (max-width: 575.98px) {
-//  .help-number {
-//    font-size: .9rem !important;
-//  }
-//
-//  .media-icons {
-//    height: 22px !important;
-//    width: 22px !important
-//  }
-//}
-//
-///////////////////////// MAIN NAVBAR ////////////////////////////////////
-//.navbar {
-//  background-color: $color-primary;
-//}
-//
-//.navbar-toggler-icon {
-//  width: 3.2rem;
-//  height: 3.2rem;
-//}
-//
-//.nav-link {
-//  color: #fff !important;
-//  font-size: 1.7rem;
-//  font-weight: bold;
-//  letter-spacing: -.08rem;
-//}
-//
-//.nav-link:hover {
-//  color: rgba(255, 255, 255, 0.5) !important;
-//}
-//
-//@media (max-width: 575.98px) {
-//  .btn-search {
-//    margin: auto;
-//    width: 100%;
-//  }
-//  .navbar-nav {
-//    margin-bottom: 1.7rem;
-//  }
-//}
-//
-//.nav-item {
-//  text-transform: uppercase;
-//  font-size: 1.4rem;
-//}
-//
-//.btn-search {
-//  font-size: 1.6rem;
-//  border-radius: 1rem;
-//}
-//
-//.form-control {
-//  font-size: 1.6rem;
-//  border-radius: 1rem;
-//}
-//
-///////////////////////// FOOTER //////////////////////////////////////
-//.footer {
-//  background-color: $color-primary-dark;
-//  text-transform: uppercase;
-//  padding: 5rem;
-//  color: $color-link;
-//
-//  @media (min-width: 768px) {
-//    li {
-//      font-size: 1.2rem;
-//    }
-//  }
-//  @media (max-width: 575.98px) {
-//    li {
-//      font-size: 1.2rem;
-//    }
-//    img {
-//      width: 219.6px;
-//      height: 74.7px;
-//    }
-//  }
-//}
-//
-//.footer {
-//  background-color: $color-primary-dark;
-//  text-transform: uppercase;
-//  padding: 5rem;
-//  color: $color-link;
-//
-//  @media (min-width: 768px) {
-//    li {
-//      font-size: 1.2rem;
-//    }
-//  }
-//  @media (max-width: 575.98px) {
-//    li {
-//      font-size: 1.2rem;
-//    }
-//  }
-//}
-//
-//
-//@import "scss/variables";
-//
-///////////////////////// MAIN HEADER ////////////////////////////////////
-//.list {
-//  margin: 0 15px 0 12px;
-//}
-//
-//li {
-//  font-size: 1rem;
-//}
-//
-//@media (max-width: 575.98px) {
-//  .help-number {
-//    font-size: 0.9rem !important;
-//  }
-//
-//  .media-icons {
-//    height: 22px !important;
-//    width: 22px !important;
-//  }
-//}
-//
-///////////////////////// MAIN NAVBAR ////////////////////////////////////
-//.navbar {
-//  background-color: $color-primary;
-//}
-//
-//.navbar-toggler-icon {
-//  width: 3.2rem;
-//  height: 3.2rem;
-//}
-//
-//.nav-link {
-//  color: #fff !important;
-//}
-//
-//.nav-link:hover {
-//  color: rgba(255, 255, 255, 0.5) !important;
-//}
-//
-//@media (max-width: 575.98px) {
-//  .btn-search {
-//    margin: auto;
-//    width: 100%;
-//  }
-//  .navbar-nav {
-//    margin-bottom: 1.7rem;
-//  }
-//}
-//
-//.nav-item {
-//  text-transform: uppercase;
-//  font-size: 1.4rem;
-//}
-//
-//.btn-search {
-//  font-size: 1.6rem;
-//  border-radius: 1rem;
-//}
-//
-//.form-control {
-//  font-size: 1.6rem;
-//  border-radius: 1rem;
-//}
-//
+/* You can add global styles to this file, and also import other style files */
+@import "scss/variables";
+@import "scss/mixins";
+@import "scss/header";
+@import "scss/footer";
+
+$color-primary: #0c4b7d;
+$color-primary-light: #eaeded;
+$color-primary-dark: #252525;
+$color-link: rgba(255, 255, 255, 0.5);
+
+//nice blue color #0088cc;
+
+
+body {
+  background-color: darkgrey; //$color-primary-light;
+}
+
+/////////////////////// SIDE NAVBAR ////////////////////////////////
+.accordionNav {
+  .card-header {
+    height: 4rem !important;
+  }
+
+  &__list {
+    list-style: none;
+    cursor: pointer;
+    padding: 0 !important;
+    text-transform: uppercase;
+  }
+
+  .btn {
+    font-size: 1.3rem;
+    color: $color-primary-dark;
+  }
+
+  .card-header {
+    cursor: pointer;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-primary;
+    font-size: 1.2rem;
+  }
+
+  a:hover {
+    color: $color-primary;
+  }
+
+  .card {
+    border: 0;
+  }
+
+  //@media screen and (-webkit-max-device-pixel-ratio: 1) {
+  //  .btn {
+  //    font-size: .8rem;
+  //  }
+}
+
+i {
+  opacity: 0.5;
+}
+
+body {
+  background-color: $color-primary-light;
+}
+
+
+
+/////////////////////// FOOTER //////////////////////////////////////
+.footer {
+  background-color: $color-primary-dark;
+  text-transform: uppercase;
+  padding: 5rem;
+  color: $color-link;
+
+  @media (min-width: 768px) {
+    li {
+      font-size: 1.2rem;
+    }
+  }
+  @media (max-width: 575.98px) {
+    li {
+      font-size: 1.2rem;
+    }
+    img {
+      width: 219.6px;
+      height: 74.7px;
+    }
+  }
+}
+
+.footer {
+  background-color: $color-primary-dark;
+  text-transform: uppercase;
+  padding: 5rem;
+  color: $color-link;
+
+  @media (min-width: 768px) {
+    li {
+      font-size: 1.2rem;
+    }
+  }
+  @media (max-width: 575.98px) {
+    li {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+
+/////////////////////// MAIN HEADER ////////////////////////////////////
+.list {
+  margin: 0 15px 0 12px;
+}
+
+li {
+  font-size: 1rem;
+}
+
+@media (max-width: 575.98px) {
+  .help-number {
+    font-size: 0.9rem !important;
+  }
+
+  .media-icons {
+    height: 22px !important;
+    width: 22px !important;
+  }
+}
+
+/////////////////////// MAIN NAVBAR ////////////////////////////////////
+.navbar {
+  background-color: $color-primary;
+}
+
+.navbar-toggler-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+@media (max-width: 575.98px) {
+  .btn-search {
+    margin: auto;
+    width: 100%;
+  }
+  .navbar-nav {
+    margin-bottom: 1.7rem;
+  }
+}
+
+.nav-item {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+.btn-search {
+  font-size: 1.6rem;
+  border-radius: 1rem;
+}
+
+.form-control {
+  font-size: 1.6rem;
+  border-radius: 1rem;
+}
+
+
+.sidenav {
+  width: 1700px !important;
+}
