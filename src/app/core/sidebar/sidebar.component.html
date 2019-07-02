@@ -11,11 +11,11 @@
       <!-- Logo -->
       <li>
         <div class="logo-wrapper waves-light">
-          <a href="#"
+          <a routerLink="/"
             ><img
               src="../../../assets/img/jpack-logo.jpg"
               class="img-fluid flex-center"
-          /></a>
+           alt=""/></a>
         </div>
       </li>
       <!--/. Logo -->
@@ -263,36 +263,48 @@
       <!-- SideNav slide-out button -->
       <div class="float-left">
         <a (click)="sidenav.show()" class="button-collapse"
-          ><i class="fas fa-bars"></i
+          ><i class="fas fa-bars white-text"></i
         ></a>
       </div>
       <!--/. SideNav slide-out button -->
     </navlinks>
 
-    <mdb-navbar-brand>
-      <!-- Breadcrumb-->
-      <div class="breadcrumbs breadcrumb-dn mr-auto"></div>
-      <!--/. Breadcrumb-->
-    </mdb-navbar-brand>
-
     <navlinks>
-      <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
-        <li class="nav-item">
+      <ul class="nav navbar-nav nav-flex-icons my-auto ml-auto ie-double-nav">
+        <li routerLink="/" class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect
+          ><i class="fas fa-home"></i>
+            <span class="clearfix d-none d-sm-inline-block">home</span></a
+          >
+        </li>
+        <li routerLink="about" class="nav-item">
           <a class="nav-link waves-light" mdbWavesEffect
             ><i class="fas fa-envelope"></i>
-            <span class="clearfix d-none d-sm-inline-block">Contact</span></a
+            <span class="clearfix d-none d-sm-inline-block">About Us</span></a
           >
         </li>
-        <li class="nav-item">
+        <li routerLink="contact" class="nav-item">
           <a class="nav-link waves-light" mdbWavesEffect
             ><i class="far fa-comments"></i>
-            <span class="clearfix d-none d-sm-inline-block">Support</span></a
+            <span class="clearfix d-none d-sm-inline-block">Contact Us</span></a
           >
         </li>
-        <li class="nav-item">
+        <li routerLink="delivery" class="nav-item">
           <a class="nav-link waves-light" mdbWavesEffect
-            ><i class="fas fa-user"></i>
+            ><i class="fas fa-truck"></i>
             <span class="clearfix d-none d-sm-inline-block">Delivery</span></a
+          >
+        </li>
+        <li routerLink="order" class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect
+          ><i class="fas fa-wifi"></i>
+            <span class="clearfix d-none d-sm-inline-block">Order Online</span></a
+          >
+        </li>
+        <li routerLink="quotation" class="nav-item">
+          <a class="nav-link waves-light" mdbWavesEffect
+          ><i class="fas fa-comment-dollar"></i>
+            <span class="clearfix d-none d-sm-inline-block">Quotation</span></a
           >
         </li>
       </ul>

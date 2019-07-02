@@ -1,0 +1,6 @@
+@import "~node_modules/rfs/scss";
+@import "/Users/jesusgonzalez/Documents/jpackInternational/node_modules/rfs/scss.scss";
+
+.lead {
+  @include responsive-font-size(1rem);
+}
