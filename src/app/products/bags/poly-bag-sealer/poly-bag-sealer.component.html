@@ -7,7 +7,7 @@
           <img
             class="z-depth-1 rounded"
             style="width: 405px; height: 405px;"
-            src="../../../../assets/img/bubble-pouches.jpg"
+            src="../../../../assets/img/poly-tubing-dispenser-and-sealer.jpg"
             alt="Anti Static Bag"
             data-toggle="modal"
             data-target="#basicExample"
@@ -27,7 +27,10 @@
               <div class="modal-content">
                 <!-- Image -->
                 <div class="modal-body d-flex justify-content-center">
-                  <img src="../../../../assets/img/bubble-pouches.jpg" alt="" />
+                  <img
+                    src="../../../../assets/img/poly-tubing-dispenser-and-sealer.jpg"
+                    alt=""
+                  />
                 </div>
                 <!-- Button -->
                 <div class="modal-footer">
@@ -51,20 +54,22 @@
 
       <div class="card w-100 mb-5 col-12 col-lg-6">
         <div class="card-body">
-          <h3 class="card-title">BUBBLE POUCHES</h3>
+          <h3 class="card-title">POLY BAG SEALER</h3>
           <p class="card-text lead">
-            Provide cushion and protection for fragile items with this bag
-            created with 3/16” bubble wrap.
+            Sealer used with poly tubing and poly bags. Seal poly bags AND poly
+            tubing to perfectly secure your product.
           </p>
           <p class="card-text lead">
-            <strong>No glue or tape needed:</strong> Includes a peel-off sealing
-            feature, which encloses the bubble pouch firmly without tape or
-            glue. It will definitely save you a lot of shipping time.
+            <strong>Seals a variety of bags:</strong>Our product seals poly
+            bags, poly tubing and polypropylene.
           </p>
-          <p class="card-text lead"><strong>Anti-Static Available.</strong></p>
           <p class="card-text lead">
-            <strong>Sizes:</strong> All of the product sizes are width x length
-            in <strong>inches.</strong>
+            <strong>Quick and easy:</strong> No warm-up time necessary. Simply
+            place poly bags within the sealer, press down gently and release.
+          </p>
+          <p class="card-text lead">
+            <strong>Seal and Cut poly tubing in one step:</strong> After
+            sealing, simply slide cutter across to trim poly tubing.
           </p>
         </div>
       </div>
@@ -73,22 +78,16 @@
           <tr
             style="text-align: center; background-color: #0c4b7d; color: white;"
           >
-            <th scope="col" style="padding-right: 0">PRODUCT # REGULAR</th>
-            <th scope="col" style="padding-right: 2px;">
-              PRODUCT # ANTI STATIC
-            </th>
-            <th scope="col" style="padding-left: 1px">SIZE W x L</th>
-            <th scope="col" style="padding-right: 2px">BAG/CASE</th>
+            <th scope="col" style="padding-right: 0">PRODUCT #</th>
+            <th scope="col" style="padding-right: 2px;">DESCRIPTION</th>
+            <th scope="col" style="padding-left: 1px">SEALING</th>
             <th scope="col">ADD TO CART</th>
           </tr>
         </thead>
-        <tr *ngFor="let pouches of bubblePouches" style="text-align: center;">
-          <td class="item align-middle">{{ pouches.productNumberRegular }}</td>
-          <td class="item align-middle">
-            {{ pouches.productNumberAntiStatic }}
-          </td>
-          <td class="item align-middle">{{ pouches.sizeWxL }}</td>
-          <td class="item align-middle">{{ pouches.bagPerCase }}</td>
+        <tr *ngFor="let bags of polyBagSealer" style="text-align: center;">
+          <td class="item align-middle">{{ bags.productNumber }}</td>
+          <td class="item align-middle">{{ bags.description }}</td>
+          <td class="item align-middle">{{ bags.sealing }}</td>
           <td class="item align-middle">
             <!--          <td>-->
             <!--            <button>submit</button>-->

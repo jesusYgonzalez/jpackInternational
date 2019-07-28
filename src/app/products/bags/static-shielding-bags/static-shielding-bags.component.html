@@ -1,3 +1,107 @@
-<p>
-  static-shielding-bags works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 405px; height: 405px;"
+            src="../../../../assets/img/Static-Shielding-Bags.jpg"
+            alt="Static Shielding Bag"
+            data-toggle="modal"
+            data-target="#basicExample"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img src="../../../../assets/img/Static-Shielding-Bags.jpg" alt="Static Shielding Bag" />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">STATIC SHIELDING BAG</h3>
+          <p class="card-text lead">
+            Static shielding bags used for protecting electronics from static electricity. Uses an aluminum layer of bag to reflect electrostatic discharges.
+          </p>
+          <p class="card-text lead">
+            <strong>Reliable:</strong> All of our static shielding bags meet or exceed industrial standards.
+          </p>
+          <p class="card-text lead">
+            <strong>Sizes:</strong> All of the product sizes are width x length
+            in inches.
+          </p>
+          <p class="card-text lead">
+            <strong>Weight:</strong> All of the product weight are in pounds per
+            1000 bags.
+          </p>
+        </div>
+      </div>
+      <table class="table table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col" style="padding-right: 0">PRODUCT #</th>
+          <th scope="col" style="padding-right: 2px;">DURABILITY</th>
+          <th scope="col" style="padding-left: 1px">SIZE</th>
+          <th scope="col" style="padding-right: 2px">WEIGHT</th>
+          <th scope="col" style="padding-right: 2px">BAG/CASE</th>
+          <th scope="col">ADD TO CART</th>
+        </tr>
+        </thead>
+        <tr *ngFor="let bag of staticShieldingBags" style="text-align: center;">
+          <td class="item align-middle">{{ bag.productNumber }}</td>
+          <td class="item align-middle">{{ bag.durability }}</td>
+          <td class="item align-middle">{{ bag.sizeWxL }}</td>
+          <td class="item align-middle">{{ bag.weight }}</td>
+          <td class="item align-middle">{{ bag.bagPerCase }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>

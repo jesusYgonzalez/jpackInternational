@@ -1,0 +1,15 @@
+@import "~node_modules/rfs/scss";
+@import "/Users/jesusgonzalez/Documents/jpackInternational/node_modules/rfs/scss.scss";
+
+p, a {
+  @include responsive-font-size(0.8rem);
+}
+
+h5 {
+  @include responsive-font-size(1rem);
+}
+
+p {
+  line-height: 15px;
+}
+

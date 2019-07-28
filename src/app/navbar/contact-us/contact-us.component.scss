@@ -1,0 +1,23 @@
+@import "~node_modules/rfs/scss";
+@import "/Users/jesusgonzalez/Documents/jpackInternational/node_modules/rfs/scss.scss";
+
+main {
+  padding-top: 4rem !important;
+}
+
+img {
+  max-width: 200%;
+  height: auto;
+}
+
+.contact, .contact-section {
+  background: #0c4b7d !important;
+}
+
+p, a {
+  @include responsive-font-size(0.9rem);
+}
+
+input, textarea {
+  @include responsive-font-size(1rem);
+}

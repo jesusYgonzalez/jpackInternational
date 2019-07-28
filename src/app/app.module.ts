@@ -5,24 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { AntiStaticBagsComponent } from './products/bags/anti-static-bags/anti-static-bags.component';
-import { AntiStaticBagsListComponent } from './products/bags/anti-static-bags/anti-static-bags-list/anti-static-bags-list.component';
 import { BubblePouchesComponent } from './products/bags/bubble-pouches/bubble-pouches.component';
-import { BubblePouchesListComponent } from './products/bags/bubble-pouches/bubble-pouches-list/bubble-pouches-list.component';
 import { ClearPolyBagsComponent } from './products/bags/clear-poly-bags/clear-poly-bags.component';
-import { ClearPolyBagsListComponent } from './products/bags/clear-poly-bags/clear-poly-bags-list/clear-poly-bags-list.component';
 import { ClearReclosableBagsComponent } from './products/bags/clear-reclosable-bags/clear-reclosable-bags.component';
 // tslint:disable-next-line:max-line-length
-import { ClearReclosableBagsListComponent } from './products/bags/clear-reclosable-bags/clear-reclosable-bags-list/clear-reclosable-bags-list.component';
 import { PolypropyleneBagsComponent } from './products/bags/polypropylene-bags/polypropylene-bags.component';
 // tslint:disable-next-line:max-line-length
-import { PolypropyleneBagsListComponent } from './products/bags/polypropylene-bags/polypropylene-bags-list/polypropylene-bags-list.component';
 import { PolyTubingComponent } from './products/bags/poly-tubing/poly-tubing.component';
-import { PolyTubingListComponent } from './products/bags/poly-tubing/poly-tubing-list/poly-tubing-list.component';
 import { StaticShieldingBagsComponent } from './products/bags/static-shielding-bags/static-shielding-bags.component';
 // tslint:disable-next-line:max-line-length
-import { StaticShieldingBagsListComponent } from './products/bags/static-shielding-bags/static-shielding-bags-list/static-shielding-bags-list.component';
 import { VacuumBagsComponent } from './products/bags/vacuum-bags/vacuum-bags.component';
-import { VacuumBagsListComponent } from './products/bags/vacuum-bags/vacuum-bags-list/vacuum-bags-list.component';
 import { BoxStaplerStaplesComponent } from './products/corrugated-boxes/box-stapler-staples/box-stapler-staples.component';
 import { CorrugatedBoxesComponent } from './products/corrugated-boxes/corrugated-boxes/corrugated-boxes.component';
 // tslint:disable-next-line:max-line-length
@@ -95,27 +87,21 @@ import { MDBBootstrapModulesPro } from 'ng-uikit-pro-standard';
 import { MDBSpinningPreloader } from 'ng-uikit-pro-standard';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarComponent } from './core/sidebar/sidebar.component';
+import { ProductRoutingModule } from './products/product-routing.module';
+import { PolyBagSealerComponent } from './products/bags/poly-bag-sealer/poly-bag-sealer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     AntiStaticBagsComponent,
-    AntiStaticBagsListComponent,
     BubblePouchesComponent,
-    BubblePouchesListComponent,
     ClearPolyBagsComponent,
-    ClearPolyBagsListComponent,
     ClearReclosableBagsComponent,
-    ClearReclosableBagsListComponent,
     PolypropyleneBagsComponent,
-    PolypropyleneBagsListComponent,
     PolyTubingComponent,
-    PolyTubingListComponent,
     StaticShieldingBagsComponent,
-    StaticShieldingBagsListComponent,
     VacuumBagsComponent,
-    VacuumBagsListComponent,
     BoxStaplerStaplesComponent,
     CorrugatedBoxesComponent,
     CorrugatedBulkContainersComponent,
@@ -181,12 +167,13 @@ import { SidebarComponent } from './core/sidebar/sidebar.component';
     OrderOnlineComponent,
     HomeComponent,
     SidebarComponent,
-
+    PolyBagSealerComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    ProductRoutingModule,
     MDBBootstrapModulesPro.forRoot()
   ],
   providers: [MDBSpinningPreloader],

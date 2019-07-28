@@ -1,0 +1,27 @@
+@import "~node_modules/rfs/scss";
+@import "/Users/jesusgonzalez/Documents/jpackInternational/node_modules/rfs/scss.scss";
+
+// MEDIA QUERY AND TABLE CODE FOR ALL PRODUCT TABLES //
+
+.item,
+th {
+  @include responsive-font-size(0.65rem);
+}
+
+@media (min-width: 576px) {
+  .item,
+  th {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+  th,
+  td {
+    padding: 0;
+  }
+}

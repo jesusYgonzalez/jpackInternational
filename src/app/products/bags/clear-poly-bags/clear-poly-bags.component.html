@@ -1,3 +1,106 @@
-<p>
-  clear-poly-bags works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 405px; height: 405px;"
+            src="../../../../assets/img/poly-bag.jpg"
+            alt="Anti Static Bag"
+            data-toggle="modal"
+            data-target="#basicExample"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="../../../../assets/img/poly-bag.jpg"
+                    alt=""
+                  />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">POLY BAG</h3>
+          <p class="card-text lead">100% virgin polyethylene bags</p>
+          <p class="card-text lead">Meets FDA and USDA specifications for food contact.</p>
+          <p class="card-text lead">Premium bag features superior clarity.</p>
+          <p class="card-text lead">Seal with Poly Bag Sealer.</p>
+          <p class="card-text lead">1 Mil – Lightweight protection for temporary storage.</p>
+          <p class="card-text lead">2 Mil – Most popular thickness for parts, clothing, and food.</p>
+          <p class="card-text lead">3 Mil – Added protection for parts and hardware.</p>
+          <p class="card-text lead">4 Mil – Heavier protection for industrial parts and tools.</p>
+          <p class="card-text lead">Customized Poly Bags Available.</p>
+        </div>
+      </div>
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col" style="padding-right: 0">PRODUCT #</th>
+            <th scope="col" style="padding-right: 2px;">DURABILITY</th>
+            <th scope="col" style="padding-left: 1px">SIZE</th>
+            <th scope="col" style="padding-right: 2px">WEIGHT</th>
+            <th scope="col" style="padding-right: 2px">BAG/CASE</th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
+        </thead>
+        <tr *ngFor="let bags of polyBags" style="text-align: center;">
+          <td class="item align-middle">{{ bags.productNumber }}</td>
+          <td class="item align-middle">{{ bags.durability }}</td>
+          <td class="item align-middle">{{ bags.sizeWxL }}</td>
+          <td class="item align-middle">{{ bags.weight }}</td>
+          <td class="item align-middle">{{ bags.bagPerCase }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput cart"
+              type="number"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary cart" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</main>
