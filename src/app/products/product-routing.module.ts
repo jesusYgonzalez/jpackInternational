@@ -11,8 +11,16 @@ import { PolyTubingComponent } from './bags/poly-tubing/poly-tubing.component';
 import { ClearReclosableBagsComponent } from './bags/clear-reclosable-bags/clear-reclosable-bags.component';
 import { StaticShieldingBagsComponent } from './bags/static-shielding-bags/static-shielding-bags.component';
 import { VacuumBagsComponent } from './bags/vacuum-bags/vacuum-bags.component';
+import { BoxStaplerStaplesComponent } from './corrugated-boxes/box-stapler-staples/box-stapler-staples.component';
+import { CorrugatedBoxesComponent } from './corrugated-boxes/corrugated-boxes/corrugated-boxes.component';
+import { CorrugatedBulkContainersComponent } from './corrugated-boxes/corrugated-bulk-containers/corrugated-bulk-containers.component';
+import { CorrugatedMailersComponent } from './corrugated-boxes/corrugated-mailers/corrugated-mailers.component';
+import { CorrugatedPadsComponent } from './corrugated-boxes/corrugated-pads/corrugated-pads.component';
+import { EasyFoldBoxesComponent } from './corrugated-boxes/easy-fold-boxes/easy-fold-boxes.component';
+import { MailingTubesComponent } from './corrugated-boxes/mailing-tubes/mailing-tubes.component';
 
 const productRoutes: Routes = [
+  // BAGS //
   { path: 'anti-static-bags', component: AntiStaticBagsComponent },
   { path: 'bubble-pouches-bags', component: BubblePouchesComponent },
   { path: 'clear-poly-bags', component: ClearPolyBagsComponent },
@@ -22,7 +30,14 @@ const productRoutes: Routes = [
   { path: 'clear-reclosable-bags', component: ClearReclosableBagsComponent },
   { path: 'static-shielding-bags', component: StaticShieldingBagsComponent },
   { path: 'vacuum-bags', component: VacuumBagsComponent },
-
+    // BOXES //
+  { path: 'box-stapler-staples', component: BoxStaplerStaplesComponent },
+  { path: 'corrugated-boxes', component: CorrugatedBoxesComponent },
+  { path: 'corrugated-bulk-containers', component: CorrugatedBulkContainersComponent },
+  { path: 'corrugated-mailers', component: CorrugatedMailersComponent },
+  { path: 'corrugated-pads', component: CorrugatedPadsComponent },
+  { path: 'easy-fold-boxes', component: EasyFoldBoxesComponent },
+  { path: 'mailing-tubes', component: MailingTubesComponent },
   ];
 
 @NgModule({

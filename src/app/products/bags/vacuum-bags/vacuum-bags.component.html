@@ -27,7 +27,10 @@
               <div class="modal-content">
                 <!-- Image -->
                 <div class="modal-body d-flex justify-content-center">
-                  <img src="../../../../assets/img/vacuum-bag.jpg" alt="Vacuum bag" />
+                  <img
+                    src="../../../../assets/img/vacuum-bag.jpg"
+                    alt="Vacuum bag"
+                  />
                 </div>
                 <!-- Button -->
                 <div class="modal-footer">
@@ -56,27 +59,27 @@
             Our vacuum bags is perfect for shipping and storing food.
           </p>
           <p class="card-text lead">
-            Keeps shipments fresh for longer periods of time: Expels moisture and provides protection for your product.
+            Keeps shipments fresh for longer periods of time: Expels moisture
+            and provides protection for your product.
           </p>
           <p class="card-text lead">
             Follows all FDA/USDA regulations.
           </p>
-
         </div>
       </div>
 
-      <h3 class="lead">VACUUM BAGS</h3>
+      <h3 class="lead mt-3">VACUUM BAGS</h3>
       <table class="table table-striped table-hover">
         <thead>
-        <tr
-          style="text-align: center; background-color: #0c4b7d; color: white;"
-        >
-          <th scope="col" style="padding-right: 0">PRODUCT #</th>
-          <th scope="col" style="padding-right: 2px;">OUTSIDE DIM WxL</th>
-          <th scope="col" style="padding-left: 1px">STRENGTH</th>
-          <th scope="col" style="padding-right: 2px">BAG/CASE</th>
-          <th scope="col">ADD TO CART</th>
-        </tr>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col" style="padding-right: 0">PRODUCT #</th>
+            <th scope="col" style="padding-right: 2px;">OUTSIDE DIM WxL</th>
+            <th scope="col" style="padding-left: 1px">STRENGTH</th>
+            <th scope="col" style="padding-right: 2px">BAG/CASE</th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
         </thead>
         <tr *ngFor="let bag of vacuumBags" style="text-align: center;">
           <td class="item align-middle">{{ bag.productNumber }}</td>
@@ -102,18 +105,21 @@
       <h3 class="lead">RECLOSABLE VACUUM BAGS</h3>
       <table class="table table-striped table-hover">
         <thead>
-        <tr
-          style="text-align: center; background-color: #0c4b7d; color: white;"
-        >
-          <th scope="col" style="padding-right: 0">PRODUCT #</th>
-          <th scope="col" style="padding-right: 2px;">OUTSIDE DIM WxL</th>
-          <th scope="col" style="padding-right: 2px;">INSIDE DIM WxL</th>
-          <th scope="col" style="padding-left: 1px">STRENGTH</th>
-          <th scope="col" style="padding-right: 2px">BAG/CASE</th>
-          <th scope="col">ADD TO CART</th>
-        </tr>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col" style="padding-right: 0">PRODUCT #</th>
+            <th scope="col" style="padding-right: 2px;">OUTSIDE DIM WxL</th>
+            <th scope="col" style="padding-right: 2px;">INSIDE DIM WxL</th>
+            <th scope="col" style="padding-left: 1px">STRENGTH</th>
+            <th scope="col" style="padding-right: 2px">BAG/CASE</th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
         </thead>
-        <tr *ngFor="let bag of reclosableVacuumBags" style="text-align: center;">
+        <tr
+          *ngFor="let bag of reclosableVacuumBags"
+          style="text-align: center;"
+        >
           <td class="item align-middle">{{ bag.productNumber }}</td>
           <td class="item align-middle">{{ bag.outsideDims }}</td>
           <td class="item align-middle">{{ bag.insideDims }}</td>

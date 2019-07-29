@@ -1,3 +1,116 @@
-<p>
-  corrugated-bulk-containers works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 405px; height: 405px;"
+            src="../../../../assets/img/corrugated-bulk-container.jpg"
+            alt="Corrugated Boxes"
+            data-toggle="modal"
+            data-target="#basicExample"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="../../../../assets/img/corrugated-bulk-container.jpg"
+                    alt="Corrugated Boxes"
+                  />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">CORRUGATED BULK CONTAINERS</h3>
+          <p class="card-text lead">
+            Bulk containers are useful for combining multiple shipments for
+            consolidate air and truck freight.
+          </p>
+          <p class="card-text lead">
+            <strong>Protective:</strong> Shields bulky and irregularly shaped items from damage.
+          </p>
+          <p class="card-text lead">
+            Meets all Domestic and Air Transport Association standards.
+          </p>
+          <p class="card-text lead">
+            Box Stapler and Staples available.
+          </p>
+          <p class="card-text lead">
+            Customized Sizes Available!
+          </p>
+        </div>
+      </div>
+
+      <!--TABLE-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col" style="padding-right: 0">DESCRIPTION</th>
+            <th scope="col" mdbTooltip="Outside Dimensions" placement="left"  style="padding-left: 1px">OUTSIDE DIM</th>
+            <th scope="col" mdbTooltip="Inside Dimensions" placement="left" style="padding-left: 1px">INSIDE DIM</th>
+            <th scope="col" style="padding-left: 1px">TEST</th>
+            <th scope="col" mdbTooltip="Number Per Bundle" placement="left" style="padding-left: 1px">BDL</th>
+            <th scope="col" mdbTooltip="Number Per Pallet" placement="left" style="padding-left: 1px">PLT</th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
+        </thead>
+        <tr *ngFor="let box of corrugatedBulk" style="text-align: center;">
+          <td class="item align-middle">{{ box.description }}</td>
+          <td class="item align-middle">{{ box.outsideDim }}</td>
+          <td class="item align-middle">{{ box.insideDim }}</td>
+          <td class="item align-middle">{{ box.test }}</td>
+          <td class="item align-middle">{{ box.numberPerBundle }}</td>
+          <td class="item align-middle">{{ box.numberPerPallet }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>

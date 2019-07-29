@@ -1,3 +1,139 @@
-<p>
-  corrugated-boxes works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 405px; height: 405px;"
+            src="../../../../assets/img/corrogated-boxes.jpg"
+            alt="Corrugated Boxes"
+            data-toggle="modal"
+            data-target="#basicExample"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="../../../../assets/img/corrogated-boxes.jpg"
+                    alt="Corrugated Boxes"
+                  />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">CORRUGATED BOXES</h3>
+          <p class="card-text lead">
+            Prevent your packages from being damaged with these durable (200-Pound test), user-friendly boxes.
+          </p>
+          <p class="card-text lead">
+            Countless sizes to choose from and custom-sized boxes available!
+          </p>
+          <p class="card-text lead">
+            Light weight & durable
+          </p>
+          <p class="card-text lead">
+            Box Stapler and Staples available.
+          </p>
+          <p class="card-text lead">
+            Customized Sizes, Prints & Designs Available!
+          </p>
+        </div>
+      </div>
+
+      <!--TABLE-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col" style="padding-right: 0">CODE</th>
+            <th scope="col" style="padding-left: 1px">DESCRIPTOIN</th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
+        </thead>
+        <tr *ngFor="let box of corrugatedBoxesCode" style="text-align: center;">
+          <td class="item align-middle">{{ box.code }}</td>
+          <td class="item align-middle">{{ box.description }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+
+      <!--TABLE-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+          <tr
+            style="background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col" style="padding-right: 0">DESCRIPTION (L x W x H)</th>
+            <th scope="col" style="padding-right: 2px;">NUMBER / BUNDLE</th>
+            <th scope="col" style="padding-right: 2px;">NUMBER / PALLET</th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
+        </thead>
+        <tr *ngFor="let box of corrugatedBoxes">
+          <td class="item align-middle">{{ box.description }}</td>
+          <td class="item align-middle">{{ box.numberPerBundle }}</td>
+          <td class="item align-middle">{{ box.numberPerPallet }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>
