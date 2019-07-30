@@ -1,3 +1,114 @@
-<p>
-  corrugated-pads works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 405px; height: 405px;"
+            src="../../../../assets/img/corrugated-pads.jpg"
+            alt="Corrugated Pads"
+            data-toggle="modal"
+            data-target="#basicExample"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="../../../../assets/img/corrugated-pads.jpg"
+                    alt="Corrugated Pads"
+                  />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">CORRUGATED PADS</h3>
+          <p class="card-text lead">
+            Corrugated pads maintain layers to separate and protect products.
+          </p>
+          <p class="card-text lead">
+            Pads help keep tops of products dust-free during storage.
+          </p>
+          <p class="card-text lead">
+            <strong>Protective:</strong> Helps prevent strapping and forklift damage.
+          </p>
+          <p class="card-text lead">
+            TP” Pads are all manufactured from White 200# Material (unless otherwise noted).
+          </p>
+          <p class="card-text lead">
+            “RP” Pads are all manufactured from 32 ECT Kraft Material (unless otherwise noted).
+          </p>
+          <p class="card-text lead">
+            Customized Sizes Available!
+          </p>
+        </div>
+      </div>
+
+      <!--TABLE-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col" style="padding-right: 0">DIMENSIONS L x W</th>
+          <th scope="col" style="padding-left: 1px">STYLE</th>
+          <th scope="col" style="padding-left: 1px">No./BUNDLE</th>
+          <th scope="col" style="padding-left: 1px">No./PALLET</th>
+          <th scope="col">ADD TO CART</th>
+        </tr>
+        </thead>
+        <tr *ngFor="let pad of corrugatedPads" style="text-align: center;">
+          <td class="item align-middle">{{ pad.dimensions }}</td>
+          <td class="item align-middle">{{ pad.style }}</td>
+          <td class="item align-middle">{{ pad.numberPerBundle }}</td>
+          <td class="item align-middle">{{ pad.numberPerPallet }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>

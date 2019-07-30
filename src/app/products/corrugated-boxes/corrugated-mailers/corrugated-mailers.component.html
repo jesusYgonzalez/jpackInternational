@@ -1,3 +1,111 @@
-<p>
-  corrugated-mailers works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <mdb-carousel [animation]="'slide'">
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/corrugated-mailers.jpg"
+              alt="First slide"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/corrugated-mailers2.jpg"
+              alt="Second slide"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/corrugated-mailers3.jpg"
+              alt="Third slide"
+            /> </mdb-carousel-item
+          ><mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/corrugated-mailers4.jpg"
+              alt="Third slide"
+            /> </mdb-carousel-item
+          ><mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/corrugated-mailers5.jpg"
+              alt="Third slide"
+            />
+          </mdb-carousel-item>
+        </mdb-carousel>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">CORRUGATED MAILERS</h3>
+          <p class="card-text lead">
+            These crush-resistant corrugated mailers are extremely durable yet
+            light-weight to help you save shipping expenses.
+          </p>
+          <p class="card-text lead">
+            Perfect for shipping out small, lightweight, and fragile items.
+          </p>
+          <p class="card-text lead">
+            <strong>Quick:</strong>Folds together in just seconds.
+          </p>
+          <p class="card-text lead">
+            <strong>Convenient:</strong>No tape, glue, or staples needed.
+            Customized Sizes Available!
+          </p>
+          <p class="card-text lead">
+            Customized Sizes Available!
+          </p>
+        </div>
+      </div>
+
+      <!--TABLE-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th
+              scope="col"
+              mdbTooltip="Inside Dimensions L x W x D"
+              placement="left"
+              style="padding-right: 0"
+            >
+              INSIDE DIM .
+            </th>
+            <th scope="col" style="padding-left: 1px">STYLE</th>
+            <th scope="col" style="padding-left: 1px">No./BUNDLE</th>
+            <th scope="col" style="padding-left: 1px">No./PALLET</th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
+        </thead>
+        <tr
+          *ngFor="let mailer of corrugatedMailers"
+          style="text-align: center;"
+        >
+          <td class="item align-middle">{{ mailer.insideDim }}</td>
+          <td class="item align-middle">{{ mailer.style }}</td>
+          <td class="item align-middle">{{ mailer.numberPerBundle }}</td>
+          <td class="item align-middle">{{ mailer.numberPerPallet }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>

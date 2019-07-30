@@ -1,3 +1,96 @@
-<p>
-  easy-fold-boxes works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <mdb-carousel [animation]="'slide'">
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/easy-fold-boxes.jpg"
+              alt="First slide"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/easy-fold-boxes2.jpg"
+              alt="Second slide"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/easy-fold-boxes3.jpg"
+              alt="Third slide"
+            />
+          </mdb-carousel-item>
+        </mdb-carousel>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">EASY-FOLD BOXES</h3>
+          <p class="card-text lead">
+            Easy-fold boxes are perfect for shipping flat items such as books &
+            catalogs.
+          </p>
+          <p class="card-text lead">
+            Quick: Folds together in just seconds
+          </p>
+          <p class="card-text lead">
+            <strong>User-Friendly:</strong>Simply place your item in the center,
+            fold in the sides, and seal with tape.
+          </p>
+          <p class="card-text lead">
+            Customized Sizes Available!
+          </p>
+        </div>
+      </div>
+
+      <!--TABLE-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th
+              scope="col"
+              mdbTooltip="Inside Dimensions L x W x D"
+              placement="left"
+              style="padding-right: 0"
+            >
+              INSIDE DIM .
+            </th>
+            <th scope="col" style="padding-left: 1px">STYLE</th>
+            <th scope="col" style="padding-left: 1px">No./BUNDLE</th>
+            <th scope="col" style="padding-left: 1px">No./PALLET</th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
+        </thead>
+        <tr
+          *ngFor="let box of easyFoldBox"
+          style="text-align: center;"
+        >
+          <td class="item align-middle">{{ box.insideDim }}</td>
+          <td class="item align-middle">{{ box.style }}</td>
+          <td class="item align-middle">{{ box.numberPerBundle }}</td>
+          <td class="item align-middle">{{ box.numberPerPallet }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>
