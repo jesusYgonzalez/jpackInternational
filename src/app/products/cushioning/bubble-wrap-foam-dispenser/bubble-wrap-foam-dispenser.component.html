@@ -1,3 +1,104 @@
-<p>
-  bubble-wrap-foam-dispenser works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 405px; height: 405px;"
+            src="../../../../assets/img/bubble-wrap-dispenser-562x562.jpg"
+            alt="Bubble Wrap & FOAM DISPENSER"
+            data-toggle="modal"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="../../../../assets/img/bubble-wrap-dispenser-562x562.jpg"
+                    alt="Bubble Wrap & FOAM DISPENSER"
+                  />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">BUBBLE WRAP & FOAM DISPENSER</h3>
+          <p class="card-text lead">
+            Dispense, move, and cut your foam or bubble wrap with ease.
+          </p>
+          <p class="card-text lead">
+            <strong>Saves time:</strong> Dispense and cut your bubble wrap and foam in one single step. Takes only
+            seconds and avoids the handling of bulky materials.
+          </p>
+          <p class="card-text lead">
+            <strong>Two arms:</strong> The Conveniently have two different rolls of bubble or foam ready to go.
+          </p>
+        </div>
+      </div>
+
+      <!--TABLE-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col" style="padding-right: 0">PRODUCT#</th>
+          <th scope="col" style="padding-left: 1px">ARM WIDTH</th>
+          <th scope="col" style="padding-left: 1px">DESCRIPTION</th>
+          <th scope="col">ADD TO CART</th>
+        </tr>
+        </thead>
+        <tr *ngFor="let bubble of bubbleWrapFoamDis" style="text-align: center;">
+          <td class="item align-middle">{{ bubble.productNumber }}</td>
+          <td class="item align-middle">{{ bubble.armWidth }}</td>
+          <td class="item align-middle">{{ bubble.description }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</main>

@@ -1,3 +1,156 @@
-<p>
-  cushioning-foam works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 405px; height: 405px;"
+            src="../../../../assets/img/cushioning-foam.jpg"
+            alt="Cushioning Foam"
+            data-toggle="modal"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="../../../../assets/img/cushioning-foam.jpg"
+                    alt="Cushioning Foam"
+                  />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">CUSHIONING FOAM</h3>
+          <p class="card-text lead">
+            Our premium, shock-absorbing polyethylene foam is perfect for
+            protecting fragile items during the shipping process.
+          </p>
+          <p class="card-text lead">
+            <strong>No scratches:</strong> Our cushioning foam offers your
+            product premium protection from scratches.
+          </p>
+          <p class="card-text lead">
+            <strong>Conveniently tear the foam:</strong> The Perforated
+            cushioning foam is available. Perforated every 12” - conveniently
+            tear off the length you need.
+          </p>
+          <p class="card-text lead">
+            <strong>Light-weight & low cost:</strong> The Our cushioning foam
+            have a guaranteed low price. Its light weight also keeps shipping
+            costs to a minimum.
+          </p>
+          <p class="card-text lead">
+            Anti-Static cushioning foam available.
+          </p>
+          <p class="card-text lead">
+            Customized Cuts Available.
+          </p>
+        </div>
+      </div>
+
+      <!--TABLE-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th
+              scope="col"
+              mdbTooltip="Product Number Regular"
+              placement="left"
+              style="padding-right: 0"
+            >
+              PROD REG
+            </th>
+            <th
+              scope="col"
+              mdbTooltip="Product Number Anti Static"
+              placement="left"
+              style="padding-right: 0"
+            >
+              PROD A/S
+            </th>
+            <th
+              mdbTooltip="Thickness"
+              placement="left"
+              scope="col"
+              style="padding-left: 1px"
+            >
+              THICK
+            </th>
+            <th
+              scope="col"
+              mdbTooltip="Roll Size Width x Length"
+              placement="left"
+              style="padding-left: 1px"
+            >
+              ROLL SZ.
+            </th>
+            <th
+              scope="col"
+              mdbTooltip="Rolls per Bundle"
+              placement="left"
+              style="padding-left: 1px"
+            >
+              ROLL/BDL
+            </th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
+        </thead>
+        <tr *ngFor="let foam of cusioningFoam" style="text-align: center;">
+          <td class="item align-middle">{{ foam.productRegular }}</td>
+          <td class="item align-middle">{{ foam.productNumberAntiStatic }}</td>
+          <td class="item align-middle">{{ foam.thickness }}</td>
+          <td class="item align-middle">{{ foam.rollSize }}</td>
+          <td class="item align-middle">{{ foam.rollPerBundle }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>

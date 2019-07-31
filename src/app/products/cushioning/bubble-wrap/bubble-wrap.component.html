@@ -1,3 +1,152 @@
-<p>
-  bubble-wrap works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 405px; height: 405px;"
+            src="../../../../assets/img/bubble-wrap.jpg"
+            alt="Bubble Wrap"
+            data-toggle="modal"
+            data-target="#basicExample"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="../../../../assets/img/bubble-wrap.jpg"
+                    alt="Bubble Wrap"
+                  />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">BUBBLE WRAP (SPECIALITY)</h3>
+          <p class="card-text lead">
+            Use bubble wrap to cushion your products and prevent damage during the shipping process.
+          </p>
+          <p class="card-text lead">
+            <strong>Conveniently tear the bubble wrap:</strong> Perforated bubble wrap is available.
+              Perforated every 12” - conveniently tear off the length you need.
+          </p>
+          <p class="card-text lead">
+            <strong>Have fewer damaged shipments:</strong> The bubble wraps we carry are of strong, premium quality- not the
+                      flimsy, poor quality import wraps sold everywhere.
+          </p>
+          <p class="card-text lead">
+            Anti-Static bubble wrap available next-day after ordering.
+          </p>
+          <p class="card-text lead">
+            Bubble Wrap dispenser available.
+          </p>
+          <p class="card-text lead">
+            Customized Cuts Available.
+          </p>
+        </div>
+      </div>
+
+      <!--TABLE-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col" style="padding-right: 0">PRODUCT # REGULAR</th>
+          <th scope="col" style="padding-left: 1px">ANTI-STATIC</th>
+          <th scope="col" style="padding-left: 1px">BUBBLE SIZE</th>
+          <th scope="col" style="padding-left: 1px">ROLL SIZE W x L</th>
+          <th scope="col" style="padding-left: 1px">ROLL/BUNDLE</th>
+          <th scope="col">ADD TO CART</th>
+        </tr>
+        </thead>
+        <tr *ngFor="let bubble of bubbleWrap" style="text-align: center;">
+          <td class="item align-middle">{{ bubble.productNumberReg }}</td>
+          <td class="item align-middle">{{ bubble.antiStatic }}</td>
+          <td class="item align-middle">{{ bubble.bubbleSize }}</td>
+          <td class="item align-middle">{{ bubble.rollSize }}</td>
+          <td class="item align-middle">{{ bubble.rollPerBundle }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+
+      <!--TABLE-->
+      <h3 class="lead">STAPLE REMOVER</h3>
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col" style="padding-right: 0">PRODUCT #</th>
+          <th scope="col" style="padding-left: 1px">DESCRIPTION</th>
+          <th scope="col" style="padding-left: 1px">No./BAG</th>
+          <th scope="col">ADD TO CART</th>
+        </tr>
+        </thead>
+        <tr *ngFor="let tube of mailingCap" style="text-align: center;">
+          <td class="item align-middle">{{ tube.productNumber }}</td>
+          <td class="item align-middle">{{ tube.description }}</td>
+          <td class="item align-middle">{{ tube.numberPerBag }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</main>

@@ -27,13 +27,9 @@ import { BubbleWrapComponent } from './products/cushioning/bubble-wrap/bubble-wr
 import { BubbleWrapFoamDispenserComponent } from './products/cushioning/bubble-wrap-foam-dispenser/bubble-wrap-foam-dispenser.component';
 import { CushioningFoamComponent } from './products/cushioning/cushioning-foam/cushioning-foam.component';
 import { KraftWrappingPaperComponent } from './products/cushioning/kraft-wrapping-paper/kraft-wrapping-paper.component';
-import { MiniAirSystemComponent } from './products/cushioning/mini-air-system/mini-air-system.component';
-import { NewsprintWrappingPaperComponent } from './products/cushioning/newsprint-wrapping-paper/newsprint-wrapping-paper.component';
 import { PackingPeanutsComponent } from './products/cushioning/packing-peanuts/packing-peanuts.component';
 // tslint:disable-next-line:max-line-length
-import { StandardComputerShippingFoamComponent } from './products/cushioning/standard-computer-shipping-foam/standard-computer-shipping-foam.component';
 import { TissueWrappingPaperComponent } from './products/cushioning/tissue-wrapping-paper/tissue-wrapping-paper.component';
-import { WrappingPaperDispenserComponent } from './products/cushioning/wrapping-paper-dispenser/wrapping-paper-dispenser.component';
 import { CircleMailingLabelsComponent } from './products/labels-envelopes/circle-mailing-labels/circle-mailing-labels.component';
 import { LaserLabelsComponent } from './products/labels-envelopes/laser-labels/laser-labels.component';
 import { PackingListEnvelopesComponent } from './products/labels-envelopes/packing-list-envelopes/packing-list-envelopes.component';
@@ -89,6 +85,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarComponent } from './core/sidebar/sidebar.component';
 import { ProductRoutingModule } from './products/product-routing.module';
 import { PolyBagSealerComponent } from './products/bags/poly-bag-sealer/poly-bag-sealer.component';
+import { NewsprintWrappingPaperComponent } from './products/cushioning/newsprint-wrapping-paper/newsprint-wrapping-paper.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -113,12 +111,8 @@ import { PolyBagSealerComponent } from './products/bags/poly-bag-sealer/poly-bag
     BubbleWrapFoamDispenserComponent,
     CushioningFoamComponent,
     KraftWrappingPaperComponent,
-    MiniAirSystemComponent,
-    NewsprintWrappingPaperComponent,
     PackingPeanutsComponent,
-    StandardComputerShippingFoamComponent,
     TissueWrappingPaperComponent,
-    WrappingPaperDispenserComponent,
     CircleMailingLabelsComponent,
     LaserLabelsComponent,
     PackingListEnvelopesComponent,
@@ -167,7 +161,8 @@ import { PolyBagSealerComponent } from './products/bags/poly-bag-sealer/poly-bag
     OrderOnlineComponent,
     HomeComponent,
     SidebarComponent,
-    PolyBagSealerComponent
+    PolyBagSealerComponent,
+    NewsprintWrappingPaperComponent
   ],
   imports: [
     BrowserModule,
