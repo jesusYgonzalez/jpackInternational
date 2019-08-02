@@ -1,3 +1,100 @@
-<p>
-  laser-labels works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <mdb-carousel [animation]="'slide'">
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/laser-labels1.jpg"
+              alt="First slide"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/laser-labels1.jpg"
+              alt="Second slide"
+            />
+          </mdb-carousel-item>
+        </mdb-carousel>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">LASER LABELS</h3>
+          <p class="card-text lead">
+            Labels used with Laser Printers
+          </p>
+          <p class="card-text lead">
+            High quality guaranteed
+          </p>
+          <p class="card-text lead">
+            <strong>Reduce printer problems:</strong> Smooth surface of the labels reduces printer jams and other
+            issues.
+          </p>
+          <p class="card-text lead">
+            <strong>Create a varitey of labels:</strong> Shipping, handling directions, advertising, inventory
+            labels, &
+            etc.
+          </p>
+        </div>
+      </div>
+
+      <!--TABLE-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col">
+            PRODUCT #
+          </th>
+          <th style="padding-left:1px;" scope="col">
+            SIZE
+          </th>
+          <th scope="col">
+            TYPE
+          </th>
+          <th mdbTooltip="Labels Per Sheet" placement="left" scope="col">
+            LABLES/S
+          </th>
+          <th mdbTooltip="Sheets Per Pack" placement="left" scope="col">
+            SHEET/P
+          </th>
+          <th mdbTooltip="Pack Per Case" placement="left" scope="col">
+            PACK/C
+          </th>
+          <th scope="col">ADD TO CART</th>
+        </tr>
+        </thead>
+        <tr
+          *ngFor="let labels of laserLabels"
+          style="text-align: center;"
+        >
+          <td class="item align-middle">{{ labels.productNumber }}</td>
+          <td class="item align-middle">{{ labels.size }}</td>
+          <td class="item align-middle">{{ labels.type }}</td>
+          <td class="item align-middle">{{ labels.labelsPerSheet }}</td>
+          <td class="item align-middle">{{ labels.sheetsPerPack }}</td>
+          <td class="item align-middle">{{ labels.packPerCase }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>

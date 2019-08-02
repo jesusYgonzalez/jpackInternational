@@ -25,6 +25,11 @@ import { KraftWrappingPaperComponent } from './cushioning/kraft-wrapping-paper/k
 import { PackingPeanutsComponent } from './cushioning/packing-peanuts/packing-peanuts.component';
 import { TissueWrappingPaperComponent } from './cushioning/tissue-wrapping-paper/tissue-wrapping-paper.component';
 import { NewsprintWrappingPaperComponent } from './cushioning/newsprint-wrapping-paper/newsprint-wrapping-paper.component';
+import { CircleMailingLabelsComponent } from './labels-envelopes/circle-mailing-labels/circle-mailing-labels.component';
+import { LaserLabelsComponent } from './labels-envelopes/laser-labels/laser-labels.component';
+import { PackingListEnvelopesComponent } from './labels-envelopes/packing-list-envelopes/packing-list-envelopes.component';
+import { ShippingHandlingLabelsComponent } from './labels-envelopes/shipping-handling-labels/shipping-handling-labels.component';
+import { ThermalTransferComponent } from './labels-envelopes/thermal-transfer/thermal-transfer.component';
 
 const productRoutes: Routes = [
   // BAGS //
@@ -52,14 +57,20 @@ const productRoutes: Routes = [
   { path: 'kraft-wrapping-paper', component: KraftWrappingPaperComponent },
   { path: 'newsprint-wrapping-paper', component: NewsprintWrappingPaperComponent },
   { path: 'packing-peanuts', component: PackingPeanutsComponent },
-  { path: 'tissue-wrapping-paper', component: TissueWrappingPaperComponent }
+  { path: 'tissue-wrapping-paper', component: TissueWrappingPaperComponent },
+  // LABELS AND ENVELOPES //
+  { path: 'circle-mailing-labels', component: CircleMailingLabelsComponent },
+  { path: 'laser-labels', component: LaserLabelsComponent },
+  { path: 'packing-list-envelopes', component: PackingListEnvelopesComponent },
+  { path: 'shipping-handling-labels', component: ShippingHandlingLabelsComponent },
+  { path: 'thermal-transfer', component: ThermalTransferComponent },
 ];
 
 @NgModule({
   imports: [CommonModule, RouterModule.forRoot(productRoutes),
-    RouterModule.forRoot(productRoutes, {
-      scrollPositionRestoration: 'enabled'
-    }),
+    // RouterModule.forRoot(productRoutes, {
+    //   scrollPositionRestoration: 'enabled'
+    // }),
   ],
   exports: [RouterModule]
 })
