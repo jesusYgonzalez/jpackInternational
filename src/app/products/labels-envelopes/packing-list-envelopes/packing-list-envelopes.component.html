@@ -1,3 +1,112 @@
-<p>
-  packing-list-envelopes works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 405px; height: 405px;"
+            src="../../../../assets/img/Packing-list-envelopes.jpg"
+            alt="Packing List Envelopes"
+            data-toggle="modal"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="../../../../assets/img/Packing-list-envelopes.jpg"
+                    alt="Packing List Envelopes"
+                  />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">Packing List Envelopes</h3>
+          <p class="card-text lead">
+            Preprinted clear envelopes with an important message.
+          </p>
+          <p class="card-text lead">
+            <strong>Send packing lists, invoices, or just a message:</strong> “PACKING LIST ENCLOSED”, “INVOICE ENCLOSED”, and blank envelopes available.
+          </p>
+          <p class="card-text lead">
+            <strong>Quick and easy to use:</strong> Attaches to your packages without tape or glue in seconds.
+          </p>
+        </div>
+      </div>
+
+      <!--TABLE-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col">
+            PRODUCT #
+          </th>
+          <th style="padding-left:1px;" scope="col">
+            DESCRIPTION
+          </th>
+          <th mdbTooltip="Labels Per Sheet" placement="left" scope="col">
+            NO./CASE
+          </th>
+          <th scope="col">ADD TO CART</th>
+        </tr>
+        </thead>
+        <tr
+          *ngFor="let envelope of packingListEnvelopes"
+          style="text-align: center;"
+        >
+          <td class="item align-middle">{{ envelope.productNumber }}</td>
+          <td class="item align-middle">{{ envelope.description }}</td>
+          <td class="item align-middle">{{ envelope.numberPerCase }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>

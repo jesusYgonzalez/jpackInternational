@@ -30,6 +30,9 @@ import { LaserLabelsComponent } from './labels-envelopes/laser-labels/laser-labe
 import { PackingListEnvelopesComponent } from './labels-envelopes/packing-list-envelopes/packing-list-envelopes.component';
 import { ShippingHandlingLabelsComponent } from './labels-envelopes/shipping-handling-labels/shipping-handling-labels.component';
 import { ThermalTransferComponent } from './labels-envelopes/thermal-transfer/thermal-transfer.component';
+import { KraftBubbleComponent } from './mailers/kraft-bubble/kraft-bubble.component';
+import { PolyBubbleMailerComponent } from './mailers/poly-bubble-mailer/poly-bubble-mailer.component';
+import { PolyMailerComponent } from './mailers/poly-mailer/poly-mailer.component';
 
 const productRoutes: Routes = [
   // BAGS //
@@ -64,6 +67,10 @@ const productRoutes: Routes = [
   { path: 'packing-list-envelopes', component: PackingListEnvelopesComponent },
   { path: 'shipping-handling-labels', component: ShippingHandlingLabelsComponent },
   { path: 'thermal-transfer', component: ThermalTransferComponent },
+  // MAILERS //
+  { path: 'kraft-bubble-mailers', component: KraftBubbleComponent },
+  { path: 'poly-bubble-mailers', component: PolyBubbleMailerComponent },
+  { path: 'poly-mailer', component: PolyMailerComponent }
 ];
 
 @NgModule({

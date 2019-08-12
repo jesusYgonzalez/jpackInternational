@@ -1,3 +1,113 @@
-<p>
-  shipping-handling-labels works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <mdb-carousel [animation]="'slide'">
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/please-handle-with-care-fragile.jpg"
+              alt="First slide"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/glass-handle-with-care.jpg"
+              alt="Second slide"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/please-handle-with-care-fragile2.jpg"
+              alt="Second slide"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/this-side-up-fragile.jpg"
+              alt="Second slide"
+            />
+          </mdb-carousel-item>
+        </mdb-carousel>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">SHIPPING & HANDLING LABELS</h3>
+          <p class="card-text lead">
+            <strong
+              >Trustworthy: Our very own private label brand of labels, has been
+              around for almost two decades.</strong
+            >
+            Our products offer our clients a peace of mind that their gifts to
+            loved ones and their companies’ shipments are protected throughout
+            the unpredictable shipping process.
+          </p>
+          <p class="card-text lead">
+            <strong>Reliable:</strong> Our labels contain a powerful adhesive
+            that sticks to virtually any surface for a permanent hold.
+          </p>
+          <p class="card-text lead">
+            <strong>Our Labels:</strong> ensure High-Resolution, Vibrant-Red,
+            Semi-Gloss, Premium Labels.
+          </p>
+          <p class="card-text lead">
+            Provide eye-catching, professional shipping & handling instructions
+            to ensure the safe arrival of your important shipments.
+          </p>
+          <p class="card-text lead">
+            Plenty of different labels available; send us an email or give us a
+            call.
+          </p>
+        </div>
+      </div>
+
+      <!--TABLE-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col">
+              PRODUCT #
+            </th>
+            <th style="padding-left:1px;" scope="col">
+              SIZE W x L
+            </th>
+            <th scope="col">
+              DESCRIPTION
+            </th>
+            <th mdbTooltip="Labels Per Sheet" placement="left" scope="col">
+              LABLES/ROLL
+            </th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
+        </thead>
+        <tr *ngFor="let labels of shippingHandlingLabels" style="text-align: center;">
+          <td class="item align-middle">{{ labels.productNumber }}</td>
+          <td class="item align-middle">{{ labels.size }}</td>
+          <td class="item align-middle">{{ labels.description }}</td>
+          <td class="item align-middle">{{ labels.labelsPerRoll }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>

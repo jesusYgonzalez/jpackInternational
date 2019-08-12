@@ -1,3 +1,113 @@
-<p>
-  poly-bubble-mailer works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 405px; height: 405px;"
+            src="../../../../assets/img/poly-bubble-mailer1.jpg"
+            alt="Poly Bubble Mailers"
+            data-toggle="modal"
+            data-target="#basicExample"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="../../../../assets/img/poly-bubble-mailer1.jpg"
+                    alt="Poly Bubble Mailers"
+                  />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">POLY BUBBLE MAILERS (SPECIALTY)</h3>
+          <p class="card-text lead">
+            Our high quality polyethylene mailers protect delicate products with an extra layer of 3/16” bubble wrap.
+          </p>
+          <p class="card-text lead">
+            <strong>Prevents damaged shipments:</strong> In addition to its water, puncture, and tear resistant features, these thick mailers are layered with protective bubble wrap.
+
+          </p>
+          <p class="card-text lead">
+            <strong>No glue or tape needed:</strong> Includes a peel-off sealing feature, which secures the bubble mailer firmly without tape or glue. It will definitely save you a lot of shipping time.
+          </p>
+          <p class="card-text lead">
+            <strong
+            >All sizes are INSIDE DIMENSIONS that are usable for shipping.
+            </strong>
+          </p>
+        </div>
+      </div>
+
+      <!--TABLE-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col" style="padding-right: 0">PRODUCT #</th>
+          <th scope="col" style="padding-left: 1px">DESCRIPTION</th>
+          <th scope="col" style="padding-left: 1px">SIZE</th>
+          <th scope="col" style="padding-left: 1px">NUMBER/CASE</th>
+          <th scope="col">ADD TO CART</th>
+        </tr>
+        </thead>
+        <tr *ngFor="let mailer of polyBubbleMailers" style="text-align: center;">
+          <td class="item align-middle">{{ mailer.productNumber }}</td>
+          <td class="item align-middle">{{ mailer.description }}</td>
+          <td class="item align-middle">{{ mailer.size }}</td>
+          <td class="item align-middle">{{ mailer.numberPerCase }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</main>

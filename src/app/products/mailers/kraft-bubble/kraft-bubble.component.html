@@ -1,3 +1,122 @@
-<p>
-  kraft-bubble works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 405px; height: 405px;"
+            src="../../../../assets/img/kraftBubbleMailer.jpg"
+            alt="Kraft Bubble Mailer"
+            data-toggle="modal"
+            data-target="#basicExample"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="../../../../assets/img/kraftBubbleMailer.jpg"
+                    alt="Kraft Bubble Mailer"
+                  />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">KRAFT BUBBLE MAILERS (SPECIALTY)</h3>
+          <p class="card-text lead">
+            Our Kraft bubble mailers are quality Kraft envelopes with an
+            interior layered with protective 3/16” bubble wrap.
+          </p>
+          <p class="card-text lead">
+            <strong>Economical:</strong> Our bubble mailers, while already
+            low-priced, will help you save more money on postage due to its
+            light weight.
+          </p>
+          <p class="card-text lead">
+            <strong>Prevents damaged shipments:</strong> Our bubble mailers are
+            layered with high-quality, durable bubble wrap to prevent damage
+            during the shipping & handling process.
+          </p>
+          <p class="card-text lead">
+            <strong>No glue or tape needed:</strong> Includes a peel-off sealing
+            feature, which secures the bubble mailer firmly without tape or
+            glue. It will definitely save you a lot of shipping time.
+          </p>
+          <p class="card-text lead">
+            <strong
+              >All sizes are INSIDE DIMENSIONS that are usable for shipping.
+            </strong>
+          </p>
+        </div>
+      </div>
+
+      <!--TABLE-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col" style="padding-right: 0">PRODUCT #</th>
+            <th scope="col" style="padding-left: 1px">DESCRIPTION</th>
+            <th scope="col" style="padding-left: 1px">INSIDE SIZE</th>
+            <th scope="col" style="padding-left: 1px">NUMBER/CASE</th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
+        </thead>
+        <tr *ngFor="let mailer of kraftBubbleMailer" style="text-align: center;">
+          <td class="item align-middle">{{ mailer.productNumber }}</td>
+          <td class="item align-middle">{{ mailer.description }}</td>
+          <td class="item align-middle">{{ mailer.insideLength }}</td>
+          <td class="item align-middle">{{ mailer.numberPerCase }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</main>

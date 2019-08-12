@@ -1,3 +1,266 @@
-<p>
-  thermal-transfer works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <mdb-carousel [animation]="'slide'">
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/thermal-transfer-label.jpg"
+              alt="Thermal Transfer Label"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/label-3-core.jpg"
+              alt="Label 3 Core"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/fanfolded-labels.jpg"
+              alt="Fan folded Labels"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/this-side-up-fragile.jpg"
+              alt="This Side Up Fragile"
+            />
+          </mdb-carousel-item>
+        </mdb-carousel>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">
+            THERMAL, TRANSFER & DIRECT THERMAL SHIPPING LABELS
+          </h3>
+          <p class="card-text lead">
+            Shipping labels used with thermal transfer printers.
+          </p>
+          <p class="card-text lead">
+            <strong>Expedites labeling process:</strong> Print out label after
+            label in just seconds. Simply peel and stick onto your package.
+          </p>
+          <p class="card-text lead">
+            Produce accurate, high-quality images with excellent edge definition.
+          </p>
+          <p class="card-text lead">
+            Excellent print and glue quality guaranteed.
+          </p>
+        </div>
+      </div>
+
+      <!--TABLES-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col">
+              PRODUCT #
+            </th>
+            <th style="padding-left:1px;" scope="col">
+              SIZE W x L
+            </th>
+            <th scope="col">
+              LABELS/ROLL
+            </th>
+            <th mdbTooltip="Labels Per Sheet" placement="left" scope="col">
+              ROLLS/CASE
+            </th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
+        </thead>
+        <tr
+          *ngFor="let labels of thermalTransferLabels"
+          style="text-align: center;"
+        >
+          <td class="item align-middle">{{ labels.productNumber }}</td>
+          <td class="item align-middle">{{ labels.size }}</td>
+          <td class="item align-middle">{{ labels.labelsPerRoll }}</td>
+          <td class="item align-middle">{{ labels.labelsPerCase }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+
+      <h3 class="lead">FANFOLDED THERMAL TRANSFER LABELS</h3>
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col">PRODUCT #</th>
+          <th scope="col">SIZE W x L</th>
+          <th scope="col" mdbTooltip="Labels Per Roll" placement="left">Lbl/ROLL</th>
+          <th scope="col" mdbTooltip="Stacks Per Box" placement="left">St/BOX</th>
+          <th scope="col" mdbTooltip="Labels Per Box" placement="left">Lbl/BOX</th>
+          <th scope="col">ADD TO CART</th>
+        </tr>
+        </thead>
+        <tr
+          *ngFor="let labels of fanfoldedThermaLabels"
+          style="text-align: center;"
+        >
+          <td class="item align-middle">{{ labels.productNumber }}</td>
+          <td class="item align-middle">{{ labels.size }}</td>
+          <td class="item align-middle">{{ labels.labelsPerRoll }}</td>
+          <td class="item align-middle">{{ labels.stacksPerBox }}</td>
+          <td class="item align-middle">{{ labels.labelsPerBox }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+
+      <h3 class="lead">DIRECT THERMAL LABELS 3" CORE</h3>
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col" style="padding-right: 0">PRODUCT #</th>
+          <th scope="col" style="padding-right: 2px;">SIZE</th>
+          <th scope="col" style="padding-right: 2px;">Lbl/Roll</th>
+          <th scope="col" style="padding-left: 1px">Rll/Case</th>
+          <th scope="col" style="padding-right: 2px">Lbl/Case</th>
+          <th scope="col">ADD TO CART</th>
+        </tr>
+        </thead>
+        <tr
+          *ngFor="let bag of directThermalThreeInchCoreLbl"
+          style="text-align: center;"
+        >
+          <td class="item align-middle">{{ bag.productNumber }}</td>
+          <td class="item align-middle">{{ bag.size }}</td>
+          <td class="item align-middle">{{ bag.labelsPerRoll }}</td>
+          <td class="item align-middle">{{ bag.rollsPerCase }}</td>
+          <td class="item align-middle">{{ bag.labelsPerCase }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+
+      <h3 class="lead">FANFOLDED DIRECT TRANSFER LABELS</h3>
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col" style="padding-right: 0">PRODUCT #</th>
+          <th scope="col" style="padding-right: 2px;">SIZE</th>
+          <th scope="col" style="padding-right: 2px;">Lbl/ROLL</th>
+          <th scope="col" style="padding-left: 1px">Rls/Case</th>
+          <th scope="col" style="padding-right: 2px">Lbl/Case</th>
+          <th scope="col">ADD TO CART</th>
+        </tr>
+        </thead>
+        <tr
+          *ngFor="let label of fanfoldedDirectTransferLbl"
+          style="text-align: center;"
+        >
+          <td class="item align-middle">{{ label.productNumber }}</td>
+          <td class="item align-middle">{{ label.size }}</td>
+          <td class="item align-middle">{{ label.labelPerRoll }}</td>
+          <td class="item align-middle">{{ label.rollsPerCase }}</td>
+          <td class="item align-middle">{{ label.labelPerCase }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+
+      <h3 class="lead">DIRECT THERMAL LABELS 1" CORE</h3>
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col" style="padding-right: 0">PRODUCT #</th>
+          <th scope="col" style="padding-right: 2px;">SIZE</th>
+          <th scope="col" style="padding-right: 2px;">Lbl/ROLL</th>
+          <th scope="col" style="padding-left: 1px">Rls/Case</th>
+          <th scope="col" style="padding-right: 2px">Lbl/Case</th>
+          <th scope="col">ADD TO CART</th>
+        </tr>
+        </thead>
+        <tr
+          *ngFor="let label of directThermalTransLbl"
+          style="text-align: center;"
+        >
+          <td class="item align-middle">{{ label.productNumber }}</td>
+          <td class="item align-middle">{{ label.size }}</td>
+          <td class="item align-middle">{{ label.labelsPerRoll }}</td>
+          <td class="item align-middle">{{ label.rollsPerCase }}</td>
+          <td class="item align-middle">{{ label.labelsPerCase }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>
