@@ -38,8 +38,6 @@ import { ThermalTransferComponent } from './products/labels-envelopes/thermal-tr
 import { KraftBubbleComponent } from './products/mailers/kraft-bubble/kraft-bubble.component';
 import { PolyBubbleMailerComponent } from './products/mailers/poly-bubble-mailer/poly-bubble-mailer.component';
 import { PolyMailerComponent } from './products/mailers/poly-mailer/poly-mailer.component';
-import { CorrugatedCornerPadsComponent } from './products/strapping/corrugated-corner-pads/corrugated-corner-pads.component';
-import { FoamCornerPadsComponent } from './products/strapping/foam-corner-pads/foam-corner-pads.component';
 import { PolyStrappingComponent } from './products/strapping/poly-strapping/poly-strapping.component';
 import { PolyStrappingMachineComponent } from './products/strapping/poly-strapping-machine/poly-strapping-machine.component';
 import { PolyStrappingToolsComponent } from './products/strapping/poly-strapping-tools/poly-strapping-tools.component';
@@ -121,8 +119,6 @@ import { RouterModule } from '@angular/router';
     KraftBubbleComponent,
     PolyBubbleMailerComponent,
     PolyMailerComponent,
-    CorrugatedCornerPadsComponent,
-    FoamCornerPadsComponent,
     PolyStrappingComponent,
     PolyStrappingMachineComponent,
     PolyStrappingToolsComponent,

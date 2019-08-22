@@ -33,6 +33,11 @@ import { ThermalTransferComponent } from './labels-envelopes/thermal-transfer/th
 import { KraftBubbleComponent } from './mailers/kraft-bubble/kraft-bubble.component';
 import { PolyBubbleMailerComponent } from './mailers/poly-bubble-mailer/poly-bubble-mailer.component';
 import { PolyMailerComponent } from './mailers/poly-mailer/poly-mailer.component';
+import { PolyStrappingComponent } from './strapping/poly-strapping/poly-strapping.component';
+import { PolyStrappingMachineComponent } from './strapping/poly-strapping-machine/poly-strapping-machine.component';
+import { PolyStrappingToolsComponent } from './strapping/poly-strapping-tools/poly-strapping-tools.component';
+import { SteelStrappingComponent } from './strapping/steel-strapping/steel-strapping.component';
+import { VBoardsComponent } from './strapping/v-boards/v-boards.component';
 
 const productRoutes: Routes = [
   // BAGS //
@@ -70,7 +75,13 @@ const productRoutes: Routes = [
   // MAILERS //
   { path: 'kraft-bubble-mailers', component: KraftBubbleComponent },
   { path: 'poly-bubble-mailers', component: PolyBubbleMailerComponent },
-  { path: 'poly-mailer', component: PolyMailerComponent }
+  { path: 'poly-mailer', component: PolyMailerComponent },
+  // STRAPPING //
+  { path: 'poly-strapping', component: PolyStrappingComponent },
+  { path: 'poly-strapping-machine', component: PolyStrappingMachineComponent },
+  { path: 'poly-strapping-tools', component: PolyStrappingToolsComponent },
+  { path: 'steel-strapping', component: SteelStrappingComponent },
+  { path: 'v-boards', component: VBoardsComponent }
 ];
 
 @NgModule({
