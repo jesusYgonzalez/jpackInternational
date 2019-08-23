@@ -1,3 +1,125 @@
-<p>
-  steel-strapping works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 405px; height: 405px;"
+            src="../../../../assets/img/steel-strapping.jpg"
+            alt="Steel Strapping"
+            data-toggle="modal"
+            data-target="#basicExample"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="../../../../assets/img/steel-strapping.jpg"
+                    alt="Steel Strapping"
+                  />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">STEEL STRAPPING</h3>
+          <p class="card-text lead">
+            Get high-tensile, low stretch steel strapping to help make sure heavy-duty goods are safely bound for shipping and transport.
+          </p>
+          <p class="card-text lead">
+            <strong>Promotes safety: </strong> By strapping products together on the pallet, you are protecting your
+            employees and your products during storage and shipment.
+          </p>
+          <p class="card-text lead">
+            <strong>Protects shipments: </strong> The maximum durability strapping for preventing your pallet from
+            toppling
+            during shipping events like sudden stops or bumps.
+
+          </p>
+
+        </div>
+      </div>
+
+      <!--TABLE-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col" mdbTooltip="Product Number" placement="left">
+            PRODUCT #
+          </th>
+          <th scope="col">
+            WIDTH
+          </th>
+          <th scope="col">
+            THICKNESS
+          </th>
+          <th scope="col" mdbTooltip="Break Strength" placement="left">
+            BRK
+          </th>
+          <th scope="col" mdbTooltip="Approximate Pounds Per Coil" placement="left">
+            APPROX. LB./COIL
+          </th>
+          <th scope="col" mdbTooltip="Tooltip on left" placement="left">
+            ADD TO CART
+          </th>
+        </tr>
+        </thead>
+        <tr *ngFor="let strapping of steelStrapping" style="text-align: center;">
+          <td class="item align-middle">{{ strapping.productNumber }}</td>
+          <td class="item align-middle">{{ strapping.width }}</td>
+          <td class="item align-middle">{{ strapping.thickness }}</td>
+          <td class="item align-middle">{{ strapping.breakStrength }}</td>
+          <td class="item align-middle">{{ strapping.approxLbsPerCoil }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>

@@ -1,3 +1,263 @@
-<p>
-  poly-strapping-tools works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 405px; height: 405px;"
+            src="../../../../assets/img/poly-strapping-tools.jpg"
+            alt="Poly Strapping Tools"
+            data-toggle="modal"
+            data-target="#basicExample"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="../../../../assets/img/poly-strapping-tools.jpg"
+                    alt="Poly Strapping Tools"
+                  />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">POLY STRAPPING TOOLS</h3>
+          <p class="card-text lead">
+            <strong>Poly Strapping Cart: </strong>A strapping cart to expedite
+            the poly strapping process. Features a convenient tool tray.
+          </p>
+          <p class="card-text lead">
+            <strong>Tensioner: </strong>Our tensioner instantly tightens and
+            cuts your poly strapping around your shipment. Durable and painless
+            to use.
+          </p>
+          <p class="card-text lead">
+            <strong>Metal Sealer and Seals: </strong>Effortlessly secure the
+            poly strapping around your shipment using our reliable metal sealer
+            and seals.
+          </p>
+        </div>
+      </div>
+
+      <h3 class="lead">STRAPPING CART</h3>
+      <!-- TABLE 1 -->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col">
+              PRODUCT #
+            </th>
+            <th style="padding-left:1px;" scope="col">
+              DESCRIPTION
+            </th>
+            <th scope="col">
+              CORE
+            </th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
+        </thead>
+        <tr
+          *ngFor="let strapping of strappingCart"
+          style="text-align: center;"
+        >
+          <td class="item align-middle">{{ strapping.productNumber }}</td>
+          <td class="item align-middle">{{ strapping.description }}</td>
+          <td class="item align-middle">{{ strapping.core }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+
+      <!-- TABLE 2 -->
+      <h3 class="lead">TENSIONER</h3>
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col">PRODUCT #</th>
+            <th scope="col">DESCRIPTION</th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
+        </thead>
+        <tr
+          *ngFor="let tensioner of tensioner"
+          style="text-align: center;"
+        >
+          <td class="item align-middle">{{ tensioner.productNumber }}</td>
+          <td class="item align-middle">{{ tensioner.description }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+
+      <!-- TABLE 3 -->
+      <h3 class="lead">SEALERS</h3>
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col">PRODUCT #</th>
+            <th scope="col">DESCTIPTION</th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
+        </thead>
+        <tr
+          *ngFor="let sealer of sealers"
+          style="text-align: center;"
+        >
+          <td class="item align-middle">{{ sealer.productNumber }}</td>
+          <td class="item align-middle">{{ sealer.description }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+
+      <!-- TABLE 4 -->
+      <h3 class="lead">METAL SEALS (OM)</h3>
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col" style="padding-right: 0">PRODUCT #</th>
+            <th scope="col" style="padding-right: 2px;">DESCRIPTION</th>
+            <th scope="col" style="padding-right: 2px;">NO./CARTON</th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
+        </thead>
+        <tr
+          *ngFor="let seal of metalSeals"
+          style="text-align: center;"
+        >
+          <td class="item align-middle">{{ seal.productNumber }}</td>
+          <td class="item align-middle">{{ seal.description }}</td>
+          <td class="item align-middle">{{ seal.numberPerCarton }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+
+      <!-- TABLE 4 -->
+      <h3 class="lead">STEEL BUCKLES</h3>
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col" style="padding-right: 0">PRODUCT #</th>
+            <th scope="col" style="padding-right: 2px;">DESCRIPTION</th>
+            <th scope="col" style="padding-right: 2px;">NO./CARTON</th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
+        </thead>
+        <tr
+          *ngFor="let buckles of steelBuckles"
+          style="text-align: center;"
+        >
+          <td class="item align-middle">{{ buckles.productNumber }}</td>
+          <td class="item align-middle">{{ buckles.description }}</td>
+          <td class="item align-middle">{{ buckles.numberPerCarton }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>

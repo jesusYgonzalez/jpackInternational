@@ -38,6 +38,13 @@ import { PolyStrappingMachineComponent } from './strapping/poly-strapping-machin
 import { PolyStrappingToolsComponent } from './strapping/poly-strapping-tools/poly-strapping-tools.component';
 import { SteelStrappingComponent } from './strapping/steel-strapping/steel-strapping.component';
 import { VBoardsComponent } from './strapping/v-boards/v-boards.component';
+import { HandStretchWrapComponent } from './stretch-film/hand-stretch-wrap/hand-stretch-wrap.component';
+import { MachineStretchWrapComponent } from './stretch-film/machine-stretch-wrap/machine-stretch-wrap.component';
+import { OpaqueStretchWrapComponent } from './stretch-film/opaque-stretch-wrap/opaque-stretch-wrap.component';
+import { ShrinkWrapSystemComponent } from './stretch-film/shrink-wrap-system/shrink-wrap-system.component';
+import { ShrinkWrapRollComponent } from './stretch-film/shrink-wrap-roll/shrink-wrap-roll.component';
+import { StretchWrapDispenserComponent } from './stretch-film/stretch-wrap-dispenser/stretch-wrap-dispenser.component';
+import { StretchWrapMachineryComponent } from './stretch-film/stretch-wrap-machinery/stretch-wrap-machinery.component';
 
 const productRoutes: Routes = [
   // BAGS //
@@ -81,7 +88,14 @@ const productRoutes: Routes = [
   { path: 'poly-strapping-machine', component: PolyStrappingMachineComponent },
   { path: 'poly-strapping-tools', component: PolyStrappingToolsComponent },
   { path: 'steel-strapping', component: SteelStrappingComponent },
-  { path: 'v-boards', component: VBoardsComponent }
+  // STRETCH FILM //
+  { path: 'hand-stretch-wrap', component: HandStretchWrapComponent },
+  { path: 'machine-stretch-wrap', component: MachineStretchWrapComponent },
+  { path: 'opaque-stretch-wrap', component: OpaqueStretchWrapComponent },
+  { path: 'shrink-wrap-roll', component: ShrinkWrapRollComponent },
+  { path: 'shrink-wrap-system', component: ShrinkWrapSystemComponent },
+  { path: 'stretch-wrap-dispenser', component: StretchWrapDispenserComponent },
+  { path: 'stretch-wrap-machinery', component: StretchWrapMachineryComponent }
 ];
 
 @NgModule({

@@ -1,3 +1,115 @@
-<p>
-  poly-strapping-machine works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 405px; height: 405px;"
+            src="../../../../assets/img/poly-strapping-machine.jpg"
+            alt="Poly Strapping Machine"
+            data-toggle="modal"
+            data-target="#basicExample"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="../../../../assets/img/poly-strapping-machine.jpg"
+                    alt="Poly Strapping Machine"
+                  />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">POLY STRAPPING MACHINE</h3>
+          <p class="card-text lead">
+            Our semi-automatic strapping machine greatly expedites the strapping
+            process, 2.0 seconds/strap.
+          </p>
+          <p class="card-text lead">
+            Easy Operations.
+          </p>
+          <p class="card-text lead">
+            Easy Maintnance.
+          </p>
+          <p class="card-text lead">
+            60 Second Auto-Stop; electricity-saving.
+          </p>
+          <p class="card-text lead">
+            Super-tight strapping tension.
+          </p>
+        </div>
+      </div>
+
+      <!--TABLE-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col">
+              Power
+            </th>
+            <th scope="col">
+              1 Phase, 110/220-V, 50/60Hz
+            </th>
+            <th scope="col">
+              ADD TO CART
+            </th>
+          </tr>
+        </thead>
+        <tr *ngFor="let machine of polyStrappingMachine" style="text-align: center;">
+          <td class="item align-middle">{{ machine.power }}</td>
+          <td class="item align-middle">{{ machine.voltage }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>
