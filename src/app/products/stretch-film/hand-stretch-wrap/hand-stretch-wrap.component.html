@@ -3,78 +3,44 @@
   <div class="container">
     <div class="row">
       <div class="container mb-5 col-12 col-lg-6">
-        <div class="row justify-content-center">
-          <img
-            class="z-depth-1 rounded"
-            style="width: 405px; height: 405px;"
-            src="../../../../assets/img/Vboard.jpg"
-            alt="V-Boards"
-            data-toggle="modal"
-            data-target="#basicExample"
-            (click)="frame.show()"
-            mdbWavesEffect
-          />
-          <div
-            mdbModal
-            #frame="mdbModal"
-            class="modal fade"
-            id="frameModalTop"
-            role="dialog"
-            aria-labelledby="myModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <!-- Image -->
-                <div class="modal-body d-flex justify-content-center">
-                  <img src="../../../../assets/img/Vboard.jpg" alt="V-Boards" />
-                </div>
-                <!-- Button -->
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    mdbBtn
-                    color="primary"
-                    class="waves-light"
-                    mdbWavesEffect
-                    data-dismiss="modal"
-                    (click)="frame.hide()"
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <mdb-carousel class="z-depth-1" [animation]="'slide'">
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/hand-stretch-wrap1.jpg"
+              alt="Hand Stretch Wrap"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/hand-stretch-wrap2.jpg"
+              alt="Hand Stretch Wrap Variety"
+            />
+          </mdb-carousel-item>
+        </mdb-carousel>
       </div>
 
       <div class="card w-100 mb-5 col-12 col-lg-6">
         <div class="card-body">
-          <h3 class="card-title">V-BOARDS</h3>
+          <h3 class="card-title">HAND STRETCH WRAP (SPECIALTY)</h3>
           <p class="card-text lead">
-            Provides superior corner and edge protection that’s built to the
-            industry’s highest standard of quality.
+            Our hand stretch wrap has superior cling to keep loads secure and intact.
           </p>
           <p class="card-text lead">
-            Protects the edges of the pallet against accidental damage during
-            the shipping process and during storage.
+           <strong>Durable: </strong> Resists puncturing or tearing, even around sharp corners.
           </p>
           <p class="card-text lead">
-            VBoard stabilizes and contains loads, distributes load weight
-            evenly, and easily combines with strapped or stretch wrapped loads
-            to provide maximum protection.
+           <strong>Quality: </strong> Superior cling keeps loads secure and intact.
           </p>
           <p class="card-text lead">
-            Provides increased support for double stacking pallets during the
-            shipping and storing process.
+           <strong>User-friendly: </strong> Wraps loads quickly with little effort.
           </p>
           <p class="card-text lead">
-            Widely used to protect furniture.
+            Stretch Wrap Hand Dispenser included.
           </p>
           <p class="card-text lead">
-            <strong>Customized V-Boards available: </strong> Most of our
-            customers use customized V-Boards.
+            Stretch Wrap Dispenser & Stretch Wrap System available.
           </p>
         </div>
       </div>
@@ -89,25 +55,18 @@
             PRODUCT #
           </th>
           <th scope="col">
-            DESCRIPTION
+            COLOR
           </th>
           <th scope="col">
-            THICKNESS
+            WIDTH
           </th>
           <th scope="col">
-            SIZE
+            ROLLS/CASE
           </th>
           <th
             scope="col"
           >
-            LENGTH
-          </th>
-          <th
-            scope="col"
-            mdbTooltip="Number Per Pallet"
-            placement="left"
-          >
-            NO./PALLET
+            CASE/PALLET
           </th>
           <th scope="col" mdbTooltip="Tooltip on left" placement="left">
             ADD TO CART
@@ -115,15 +74,14 @@
         </tr>
         </thead>
         <tr
-          *ngFor="let vboard of vBoard"
+          *ngFor="let wrap of handStretchWrap"
           style="text-align: center;"
         >
-          <td class="item align-middle">{{ vboard.productNumber }}</td>
-          <td class="item align-middle">{{ vboard.description }}</td>
-          <td class="item align-middle">{{ vboard.thickness }}</td>
-          <td class="item align-middle">{{ vboard.size }}</td>
-          <td class="item align-middle">{{ vboard.length }}</td>
-          <td class="item align-middle">{{ vboard.numberPerPallet }}</td>
+          <td class="item align-middle">{{ wrap.productNumber }}</td>
+          <td class="item align-middle">{{ wrap.color }}</td>
+          <td class="item align-middle">{{ wrap.width }}</td>
+          <td class="item align-middle">{{ wrap.rollsPerCase }}</td>
+          <td class="item align-middle">{{ wrap.casePerPallet }}</td>
           <td class="item align-middle">
             <!--          <td>-->
             <!--            <button>submit</button>-->

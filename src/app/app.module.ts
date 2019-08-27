@@ -46,7 +46,6 @@ import { VBoardsComponent } from './products/strapping/v-boards/v-boards.compone
 import { HandStretchWrapComponent } from './products/stretch-film/hand-stretch-wrap/hand-stretch-wrap.component';
 import { MachineStretchWrapComponent } from './products/stretch-film/machine-stretch-wrap/machine-stretch-wrap.component';
 import { OpaqueStretchWrapComponent } from './products/stretch-film/opaque-stretch-wrap/opaque-stretch-wrap.component';
-import { StretchWrapDispenserComponent } from './products/stretch-film/stretch-wrap-dispenser/stretch-wrap-dispenser.component';
 import { StretchWrapMachineryComponent } from './products/stretch-film/stretch-wrap-machinery/stretch-wrap-machinery.component';
 import { ShrinkWrapRollComponent } from './products/stretch-film/shrink-wrap-roll/shrink-wrap-roll.component';
 import { ShrinkWrapSystemComponent } from './products/stretch-film/shrink-wrap-system/shrink-wrap-system.component';
@@ -127,7 +126,6 @@ import { RouterModule } from '@angular/router';
     HandStretchWrapComponent,
     MachineStretchWrapComponent,
     OpaqueStretchWrapComponent,
-    StretchWrapDispenserComponent,
     StretchWrapMachineryComponent,
     ShrinkWrapRollComponent,
     ShrinkWrapSystemComponent,

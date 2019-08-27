@@ -1,3 +1,116 @@
-<p>
-  shrink-wrap-system works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 405px; height: 405px;"
+            src="../../../../assets/img/shrink-wrap-system.jpg"
+            alt="Shrink Wrap System"
+            data-toggle="modal"
+            data-target="#basicExample"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="../../../../assets/img/shrink-wrap-system.jpg"
+                    alt="Shrink Wrap System"
+                  />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">SHRINK WRAP SYSTEM & HEAT GUN</h3>
+          <p class="card-text lead">
+           <strong>Variety of Uses:</strong> Use with shrink wrap, stretch film, and tubing.
+          </p>
+          <p class="card-text lead">
+            <strong>User-friendly:</strong> Easily seal your products in a short period of time.
+          </p>
+          <p class="card-text lead">
+            <strong>L-Bar Sealer available:</strong> Half the time of sealing- seal two sides at once.
+          </p>
+        </div>
+      </div>
+
+      <!--TABLE-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col" mdbTooltip="Product Number" placement="left">
+            PRODUCT #
+          </th>
+          <th scope="col">
+            SIZE
+          </th>
+          <th scope="col">
+            VOLTAGE
+          </th>
+          <th scope="col" mdbTooltip="Break Strength" placement="left">
+            DESCRIPTION
+          </th>
+          <th scope="col" mdbTooltip="Tooltip on left" placement="left">
+            ADD TO CART
+          </th>
+        </tr>
+        </thead>
+        <tr *ngFor="let wrap of shrinkWrapSystem" style="text-align: center;">
+          <td class="item align-middle">{{ wrap.productNumber }}</td>
+          <td class="item align-middle">{{ wrap.size }}</td>
+          <td class="item align-middle">{{ wrap.voltage }}</td>
+          <td class="item align-middle">{{ wrap.description }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>

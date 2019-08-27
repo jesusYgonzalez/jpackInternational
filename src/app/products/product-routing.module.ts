@@ -37,14 +37,21 @@ import { PolyStrappingComponent } from './strapping/poly-strapping/poly-strappin
 import { PolyStrappingMachineComponent } from './strapping/poly-strapping-machine/poly-strapping-machine.component';
 import { PolyStrappingToolsComponent } from './strapping/poly-strapping-tools/poly-strapping-tools.component';
 import { SteelStrappingComponent } from './strapping/steel-strapping/steel-strapping.component';
-import { VBoardsComponent } from './strapping/v-boards/v-boards.component';
 import { HandStretchWrapComponent } from './stretch-film/hand-stretch-wrap/hand-stretch-wrap.component';
 import { MachineStretchWrapComponent } from './stretch-film/machine-stretch-wrap/machine-stretch-wrap.component';
 import { OpaqueStretchWrapComponent } from './stretch-film/opaque-stretch-wrap/opaque-stretch-wrap.component';
 import { ShrinkWrapSystemComponent } from './stretch-film/shrink-wrap-system/shrink-wrap-system.component';
 import { ShrinkWrapRollComponent } from './stretch-film/shrink-wrap-roll/shrink-wrap-roll.component';
-import { StretchWrapDispenserComponent } from './stretch-film/stretch-wrap-dispenser/stretch-wrap-dispenser.component';
 import { StretchWrapMachineryComponent } from './stretch-film/stretch-wrap-machinery/stretch-wrap-machinery.component';
+import { CartonSealingTapeComponent } from './tape/carton-sealing-tape/carton-sealing-tape.component';
+import { ColoredTapeComponent } from './tape/colored-tape/colored-tape.component';
+import { CustomPrintTapeComponent } from './tape/custom-print-tape/custom-print-tape.component';
+import { FilamentTapeComponent } from './tape/filament-tape/filament-tape.component';
+import { MaskingTapeComponent } from './tape/masking-tape/masking-tape.component';
+import { OfficeTapeDispenserComponent } from './tape/office-tape-dispenser/office-tape-dispenser.component';
+import { TapeDispenserComponent } from './tape/tape-dispenser/tape-dispenser.component';
+import { VinylTapeComponent } from './tape/vinyl-tape/vinyl-tape.component';
+import { WaterActivatedGummedTapeComponent } from './tape/water-activated-gummed-tape/water-activated-gummed-tape.component';
 
 const productRoutes: Routes = [
   // BAGS //
@@ -94,8 +101,18 @@ const productRoutes: Routes = [
   { path: 'opaque-stretch-wrap', component: OpaqueStretchWrapComponent },
   { path: 'shrink-wrap-roll', component: ShrinkWrapRollComponent },
   { path: 'shrink-wrap-system', component: ShrinkWrapSystemComponent },
-  { path: 'stretch-wrap-dispenser', component: StretchWrapDispenserComponent },
-  { path: 'stretch-wrap-machinery', component: StretchWrapMachineryComponent }
+  { path: 'stretch-wrap-machinery', component: StretchWrapMachineryComponent },
+  // TAPE //
+  { path: 'carton-sealing-tape', component: CartonSealingTapeComponent },
+  { path: 'colored-tape', component: ColoredTapeComponent },
+  { path: 'custom-print-tape', component: CustomPrintTapeComponent },
+  { path: 'filament-tape', component: FilamentTapeComponent },
+  { path: 'masking-tape', component: MaskingTapeComponent },
+  { path: 'office-tape-dispenser', component: OfficeTapeDispenserComponent},
+  { path: 'tape-dispenser', component: TapeDispenserComponent },
+  { path: 'vinyl-tape', component: VinylTapeComponent },
+  { path: 'water-activated-gummed-tape', component: WaterActivatedGummedTapeComponent }
+
 ];
 
 @NgModule({
