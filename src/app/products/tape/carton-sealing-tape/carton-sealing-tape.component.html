@@ -1,3 +1,143 @@
-<p>
-  carton-sealing-tape works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 405px; height: 405px;"
+            src="../../../../assets/img/carton-sealing-tape.jpg"
+            alt="Carton Sealing Tape"
+            data-toggle="modal"
+            data-target="#basicExample"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="../../../../assets/img/carton-sealing-tape.jpg"
+                    alt="Carton Sealing Tape"
+                  />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">CARTON SEALING TAPE (SPECIALTY)</h3>
+          <p class="card-text lead">
+            Our Tape contains a high-performance adhesive that sticks to
+            virtually all surfaces. Meets UPS and US Postal regulations to
+            ensure the safe arrivals of shipments.
+          </p>
+          <p class="card-text lead">
+            <strong>Reliable: </strong> Our Brand has been around for almost two
+            decades. Our products offer our clients a peace of mind that their
+            gifts to loved ones and their companies’ shipments are protected
+            throughout the unpredictable shipping process.
+          </p>
+          <p class="card-text lead">
+            <strong>Reliable:</strong> Our tape has a powerful bond, which can
+            be used for your general packaging needs.
+          </p>
+          <p class="card-text lead">
+            <strong>Temperature Resistant Performance:</strong> Offers the same
+            reliable performance under the extreme temperatures of global
+            shipments (0 to 140 Degrees Fahrenheit).
+          </p>
+          <p class="card-text lead">
+            <strong>Economical:</strong> Tape is our quality private label brand
+            so we always have the most competitive prices and most reliable
+            quality control.
+          </p>
+          <p class="card-text lead">
+            <strong>Tape Gun Dispenser Available.</strong>
+          </p>
+
+        </div>
+      </div>
+
+      <!--TABLE-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col">
+              PRODUCT #
+            </th>
+            <th scope="col">
+              SIZE
+            </th>
+            <th scope="col">
+              DURABILITY
+            </th>
+            <th scope="col">
+              COLOR
+            </th>
+            <th scope="col">
+              ROLLS/CASE
+            </th>
+            <th scope="col">
+              ADD TO CART
+            </th>
+          </tr>
+        </thead>
+        <tr
+          *ngFor="let tape of cartonSealingTape"
+          style="text-align: center;"
+        >
+          <td class="item align-middle">{{ tape.productNumber }}</td>
+          <td class="item align-middle">{{ tape.size }}</td>
+          <td class="item align-middle">{{ tape.durability }}</td>
+          <td class="item align-middle">{{ tape.color }}</td>
+          <td class="item align-middle">{{ tape.rollsPerCase }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>

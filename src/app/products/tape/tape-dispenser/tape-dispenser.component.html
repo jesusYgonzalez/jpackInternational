@@ -1,3 +1,81 @@
-<p>
-  tape-dispenser works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <mdb-carousel class="z-depth-1" [animation]="'slide'">
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/tape-dispenser.jpg"
+              alt="Tape Dispenser"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/tape-dispenser2.jpg"
+              alt="Tape Dispensers"
+            />
+          </mdb-carousel-item>
+        </mdb-carousel>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">TAPE DISPENSER</h3>
+          <p class="card-text lead">
+            Our tape guns conserve time and energy by making tape usage a
+            breeze.
+          </p>
+          <p class="card-text lead">
+            <strong>User-friendly:</strong> Easily detach the tape after use and
+            easily continue taping since last usage.
+          </p>
+          <p class="card-text lead">
+            Comfortable grip and durable product.
+          </p>
+        </div>
+      </div>
+
+      <!--TABLE-->
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col">
+              PRODUCT #
+            </th>
+            <th style="padding-left:1px;" scope="col">
+              TAPE WIDTH
+            </th>
+            <th scope="col">
+              DESCRIPTION
+            </th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
+        </thead>
+        <tr *ngFor="let tape of tapeDispenser" style="text-align: center;">
+          <td class="item align-middle">{{ tape.productNumber }}</td>
+          <td class="item align-middle">{{ tape.width }}</td>
+          <td class="item align-middle">{{ tape.description }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>

@@ -1,3 +1,164 @@
-<p>
-  office-tape-dispenser works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 405px; height: 405px;"
+            src="../../../../assets/img/office-tape-dispenser.jpg"
+            alt="Office Tape Dispenser"
+            data-toggle="modal"
+            data-target="#basicExample"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="../../../../assets/img/office-tape-dispenser.jpg"
+                    alt="Office Tape Dispenser"
+                  />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">OFFICE TAPE & DISPENSER</h3>
+          <p class="card-text lead">
+            Quality office tape used for light packaging, paper repairing, and holding applications.
+          </p>
+          <p class="card-text lead">
+            Its strong adhesive nature allows our office tape to take on a variety of tasks.
+
+          </p>
+          <p class="card-text lead">
+            <strong>Unloads smoothly and steadily:</strong> Its quality is seen with its smooth usage.
+
+          </p>
+          <p class="card-text lead">
+            Office Tape Dispenser available
+          </p>
+        </div>
+      </div>
+
+      <!-- TABLE 1 -->
+      <h3 class="lead">STATIONARY TAPE</h3>
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col">
+              PRODUCT #
+            </th>
+            <th scope="col">
+              SIZE
+            </th>
+            <th scope="col">
+              CORE
+            </th>
+            <th scope="col">
+              ROLLS/CASE
+            </th>
+            <th scope="col">
+              ADD TO CART
+            </th>
+          </tr>
+        </thead>
+        <tr *ngFor="let tape of stationaryTape" style="text-align: center;">
+          <td class="item align-middle">{{ tape.productNumber }}</td>
+          <td class="item align-middle">{{ tape.size }}</td>
+          <td class="item align-middle">{{ tape.core }}</td>
+          <td class="item align-middle">{{ tape.rollsPerCase }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+
+      <!-- TABLE 2 -->
+      <h3 class="lead">STATIONARY TAPE DISPENSER</h3>
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col">
+            PRODUCT #
+          </th>
+          <th scope="col">
+            DESCRIPTION
+          </th>
+          <th scope="col">
+            WIDTH
+          </th>
+          <th scope="col">
+            ADD TO CART
+          </th>
+        </tr>
+        </thead>
+        <tr *ngFor="let tape of stationaryTapeDispenser" style="text-align: center;">
+          <td class="item align-middle">{{ tape.productNumber }}</td>
+          <td class="item align-middle">{{ tape.description }}</td>
+          <td class="item align-middle">{{ tape.width }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>
