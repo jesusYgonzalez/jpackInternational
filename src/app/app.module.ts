@@ -59,8 +59,6 @@ import { TapeDispenserComponent } from './products/tape/tape-dispenser/tape-disp
 import { VinylTapeComponent } from './products/tape/vinyl-tape/vinyl-tape.component';
 import { WaterActivatedGummedTapeComponent } from './products/tape/water-activated-gummed-tape/water-activated-gummed-tape.component';
 import { AirPillowMachineComponent } from './products/tools-machines/air-pillow-machine/air-pillow-machine.component';
-import { BoxStaplerComponent } from './products/tools-machines/box-stapler/box-stapler.component';
-import { BubbleWrapDispenserComponent } from './products/tools-machines/bubble-wrap-dispenser/bubble-wrap-dispenser.component';
 import { GlueGunComponent } from './products/tools-machines/glue-gun/glue-gun.component';
 import { CableTiesComponent } from './products/misc/cable-ties/cable-ties.component';
 import { DockBoardComponent } from './products/misc/dock-board/dock-board.component';
@@ -84,6 +82,9 @@ import { ProductRoutingModule } from './products/product-routing.module';
 import { PolyBagSealerComponent } from './products/bags/poly-bag-sealer/poly-bag-sealer.component';
 import { NewsprintWrappingPaperComponent } from './products/cushioning/newsprint-wrapping-paper/newsprint-wrapping-paper.component';
 import { RouterModule } from '@angular/router';
+import { UtilityKnifeComponent } from './products/tools-machines/utility-knife/utility-knife.component';
+import { PolyTubingDispenserComponent } from './products/tools-machines/poly-tubing-dispenser/poly-tubing-dispenser.component';
+import { WrappingPaperDispenserComponent } from './products/tools-machines/wrapping-paper-dispenser/wrapping-paper-dispenser.component';
 
 @NgModule({
   declarations: [
@@ -139,8 +140,6 @@ import { RouterModule } from '@angular/router';
     VinylTapeComponent,
     WaterActivatedGummedTapeComponent,
     AirPillowMachineComponent,
-    BoxStaplerComponent,
-    BubbleWrapDispenserComponent,
     GlueGunComponent,
     CableTiesComponent,
     DockBoardComponent,
@@ -156,7 +155,10 @@ import { RouterModule } from '@angular/router';
     HomeComponent,
     SidebarComponent,
     PolyBagSealerComponent,
-    NewsprintWrappingPaperComponent
+    NewsprintWrappingPaperComponent,
+    UtilityKnifeComponent,
+    PolyTubingDispenserComponent,
+    WrappingPaperDispenserComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,212 @@
-<p>
-  air-pillow-machine works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <mdb-carousel class="z-depth-1 rounded" [animation]="'slide'">
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/air-pillow-machine1.jpg"
+              alt="First slide"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/air-pillow-machine2.jpg"
+              alt="Second slide"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/air-pillow-machine3.jpg"
+              alt="Second slide"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/air-pillow-machine4.jpg"
+              alt="Second slide"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/air-pillow-machine5.jpg"
+              alt="Second slide"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/air-pillow-machine6.jpg"
+              alt="Second slide"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/air-pillow-machine7.jpg"
+              alt="Second slide"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/air-pillow-machine8.jpg"
+              alt="Second slide"
+            />
+          </mdb-carousel-item>
+          <mdb-carousel-item>
+            <img
+              class="d-block w-100"
+              src="../../../../assets/img/air-pillow-machine9.jpg"
+              alt="Second slide"
+            />
+          </mdb-carousel-item>
+        </mdb-carousel>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">MINI AIR SYSTEM & AIR PILLOW</h3>
+          <p class="card-text lead">
+            The Mini Air system is an innovative packaging solution that quickly
+            and effortlessly creates air pillows on demand. User-friendly with
+            minimal set up and maintenance
+          </p>
+          <p class="card-text lead">
+            <strong>Premium protection from damage:</strong> Our air pillow is
+            thick and durable, offering the ultimate protection for fragile
+            items during drops and accidents.
+          </p>
+          <p class="card-text lead">
+            <strong>Most Space-Efficient & Cost-Efficient Void Fill:</strong>
+            roll of Mini Air Filler cushions is equivalent to 15 bags of packing
+            peanuts or 10 rolls of large bubble wrap.
+          </p>
+          <p class="card-text lead">
+            <strong>What you want, when you want it:</strong>
+            One Machine can be used to produce a variety of different types of
+            air pillows.
+          </p>
+          <p class="card-text lead">
+            <strong>Light & Quick:</strong>
+            Our Mini Air system is the lightest on the market – only 5 KG (11
+            LB.) – but works at one of the fastest paces – 8 Meters (25 FT.) per
+            minute.
+          </p>
+          <p class="card-text lead">
+            <strong>Mini Air Wrapper:</strong>
+            Provide an all-around protective layer.
+          </p>
+          <p class="card-text lead">
+            <strong>Mini Air Filler Cushion:</strong>
+            Use as void fill & cushioning.
+          </p>
+        </div>
+      </div>
+
+      <!-- TABLE 1 -->
+      <h3 class="lead">MINI AIR SYSTEM</h3>
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col">
+              PRODUCT #
+            </th>
+            <th scope="col">
+              DESCRIPTION
+            </th>
+            <th mdbTooltip="Labels Per Sheet" placement="left" scope="col">
+              WEIGHT
+            </th>
+            <th mdbTooltip="Labels Per Sheet" placement="left" scope="col">
+              SPEED
+            </th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
+        </thead>
+        <tr
+          *ngFor="let airMachine of miniAirSystem"
+          style="text-align: center;"
+        >
+          <td class="item align-middle">{{ airMachine.productNumber }}</td>
+          <td class="item align-middle">{{ airMachine.description }}</td>
+          <td class="item align-middle">{{ airMachine.weight }}</td>
+          <td class="item align-middle">{{ airMachine.speed }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+
+      <!-- TABLE 2 -->
+      <h3 class="lead">MINI AIR PILLOWS</h3>
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col">
+            PRODUCT #
+          </th>
+          <th style="padding-left:1px;" scope="col">
+            DESCRIPTION
+          </th>
+          <th scope="col">
+            CELL/SIZE
+          </th>
+          <th mdbTooltip="Labels Per Sheet" placement="left" scope="col">
+            ROLL/SIZE
+          </th>
+          <th mdbTooltip="Labels Per Sheet" placement="left" scope="col">
+            ROLL/CASE
+          </th>
+          <th scope="col">ADD TO CART</th>
+        </tr>
+        </thead>
+        <tr
+          *ngFor="let pillow of miniAirPillows"
+          style="text-align: center;"
+        >
+          <td class="item align-middle">{{ pillow.productNumber }}</td>
+          <td class="item align-middle">{{ pillow.description }}</td>
+          <td class="item align-middle">{{ pillow.cellSize }}</td>
+          <td class="item align-middle">{{ pillow.rollSize }}</td>
+          <td class="item align-middle">{{ pillow.rollsPerCase }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>

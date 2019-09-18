@@ -52,6 +52,12 @@ import { OfficeTapeDispenserComponent } from './tape/office-tape-dispenser/offic
 import { TapeDispenserComponent } from './tape/tape-dispenser/tape-dispenser.component';
 import { VinylTapeComponent } from './tape/vinyl-tape/vinyl-tape.component';
 import { WaterActivatedGummedTapeComponent } from './tape/water-activated-gummed-tape/water-activated-gummed-tape.component';
+import { AirPillowMachineComponent } from './tools-machines/air-pillow-machine/air-pillow-machine.component';
+import { GlueGunComponent } from './tools-machines/glue-gun/glue-gun.component';
+import { WrappingPaperDispenserComponent } from './tools-machines/wrapping-paper-dispenser/wrapping-paper-dispenser.component';
+import { UtilityKnifeComponent } from './tools-machines/utility-knife/utility-knife.component';
+import { PolyTubingDispenserComponent } from './tools-machines/poly-tubing-dispenser/poly-tubing-dispenser.component';
+import { VBoardsComponent } from './strapping/v-boards/v-boards.component';
 
 const productRoutes: Routes = [
   // BAGS //
@@ -95,13 +101,14 @@ const productRoutes: Routes = [
   { path: 'poly-strapping-machine', component: PolyStrappingMachineComponent },
   { path: 'poly-strapping-tools', component: PolyStrappingToolsComponent },
   { path: 'steel-strapping', component: SteelStrappingComponent },
+  { path: 'v-boards', component: VBoardsComponent },
   // STRETCH FILM //
   { path: 'hand-stretch-wrap', component: HandStretchWrapComponent },
   { path: 'machine-stretch-wrap', component: MachineStretchWrapComponent },
   { path: 'opaque-stretch-wrap', component: OpaqueStretchWrapComponent },
   { path: 'shrink-wrap-roll', component: ShrinkWrapRollComponent },
-  { path: 'shrink-wrap-system', component: ShrinkWrapSystemComponent },
   { path: 'stretch-wrap-machinery', component: StretchWrapMachineryComponent },
+  { path: 'shrink-wrap-system', component: ShrinkWrapSystemComponent },
   // TAPE //
   { path: 'carton-sealing-tape', component: CartonSealingTapeComponent },
   { path: 'colored-tape', component: ColoredTapeComponent },
@@ -111,8 +118,13 @@ const productRoutes: Routes = [
   { path: 'office-tape-dispenser', component: OfficeTapeDispenserComponent},
   { path: 'tape-dispenser', component: TapeDispenserComponent },
   { path: 'vinyl-tape', component: VinylTapeComponent },
-  { path: 'water-activated-gummed-tape', component: WaterActivatedGummedTapeComponent }
-
+  { path: 'water-activated-gummed-tape', component: WaterActivatedGummedTapeComponent },
+  // TOOLS & MACHINES //
+  { path: 'air-pillow-machine', component: AirPillowMachineComponent },
+  { path: 'glue-gun', component: GlueGunComponent },
+  { path: 'poly-tubing-dispenser', component: PolyTubingDispenserComponent },
+  { path: 'utility-knife', component: UtilityKnifeComponent },
+  { path: 'wrapping-paper-dispenser', component: WrappingPaperDispenserComponent }
 ];
 
 @NgModule({

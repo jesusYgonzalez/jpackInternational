@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="container mb-5 col-12 col-lg-6">
-        <mdb-carousel class="z-depth-1" [animation]="'slide'">
+        <mdb-carousel class="z-depth-1 rounded" [animation]="'slide'">
           <mdb-carousel-item>
             <img
               class="d-block w-100"
@@ -31,13 +31,12 @@
             High quality guaranteed
           </p>
           <p class="card-text lead">
-            <strong>Reduce printer problems:</strong> Smooth surface of the labels reduces printer jams and other
-            issues.
+            <strong>Reduce printer problems:</strong> Smooth surface of the
+            labels reduces printer jams and other issues.
           </p>
           <p class="card-text lead">
-            <strong>Create a varitey of labels:</strong> Shipping, handling directions, advertising, inventory
-            labels, &
-            etc.
+            <strong>Create a varitey of labels:</strong> Shipping, handling
+            directions, advertising, inventory labels, & etc.
           </p>
         </div>
       </div>
@@ -45,34 +44,31 @@
       <!--TABLE-->
       <table class="table mb-5 table-striped table-hover">
         <thead>
-        <tr
-          style="text-align: center; background-color: #0c4b7d; color: white;"
-        >
-          <th scope="col">
-            PRODUCT #
-          </th>
-          <th style="padding-left:1px;" scope="col">
-            SIZE
-          </th>
-          <th scope="col">
-            TYPE
-          </th>
-          <th mdbTooltip="Labels Per Sheet" placement="left" scope="col">
-            LABLES/S
-          </th>
-          <th mdbTooltip="Sheets Per Pack" placement="left" scope="col">
-            SHEET/P
-          </th>
-          <th mdbTooltip="Pack Per Case" placement="left" scope="col">
-            PACK/C
-          </th>
-          <th scope="col">ADD TO CART</th>
-        </tr>
+          <tr
+            style="text-align: center; background-color: #0c4b7d; color: white;"
+          >
+            <th scope="col">
+              PRODUCT #
+            </th>
+            <th style="padding-left:1px;" scope="col">
+              SIZE
+            </th>
+            <th scope="col">
+              TYPE
+            </th>
+            <th mdbTooltip="Labels Per Sheet" placement="left" scope="col">
+              LABLES/S
+            </th>
+            <th mdbTooltip="Sheets Per Pack" placement="left" scope="col">
+              SHEET/P
+            </th>
+            <th mdbTooltip="Pack Per Case" placement="left" scope="col">
+              PACK/C
+            </th>
+            <th scope="col">ADD TO CART</th>
+          </tr>
         </thead>
-        <tr
-          *ngFor="let labels of laserLabels"
-          style="text-align: center;"
-        >
+        <tr *ngFor="let labels of laserLabels" style="text-align: center;">
           <td class="item align-middle">{{ labels.productNumber }}</td>
           <td class="item align-middle">{{ labels.size }}</td>
           <td class="item align-middle">{{ labels.type }}</td>
