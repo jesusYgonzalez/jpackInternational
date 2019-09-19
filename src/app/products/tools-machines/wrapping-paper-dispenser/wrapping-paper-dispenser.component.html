@@ -1,3 +1,113 @@
-<p>
-  wrapping-paper-dispenser works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 455px; height: 455px;"
+            src="../../../../assets/img/wrapping-paper-dispenser.jpg"
+            alt="Wrapping Paper Dispenser"
+            data-toggle="modal"
+            data-target="#basicExample"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="../../../../assets/img/wrapping-paper-dispenser.jpg"
+                    alt="Wrapping Paper Dispenser"
+                  />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">WRAPPING PAPER DISPENSER</h3>
+          <p class="card-text lead">
+            Quickly dispense and cut industrial rolls of paper effortlessly and cleanly.
+          </p>
+          <p class="card-text lead">
+            Dispense and cut your wrapping paper in one single step. Takes only seconds and avoids the handling of bulky materials.
+          </p>
+        </div>
+      </div>
+
+      <!-- TABLE 1 -->
+      <h3 class="lead">GLUE GUNS</h3>
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col">
+            PRODUCT #
+          </th>
+          <th scope="col">
+            ARM WIDTH
+          </th>
+          <th scope="col">
+            DESCRIPTION
+          </th>
+          <th scope="col">
+            ADD TO CART
+          </th>
+        </tr>
+        </thead>
+        <tr
+          *ngFor="let paper of wrappingPaperDispenser"
+          style="text-align: center;"
+        >
+          <td class="item align-middle">{{ paper.productNumber }}</td>
+          <td class="item align-middle">{{ paper.armWidth }}</td>
+          <td class="item align-middle">{{ paper.description }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>

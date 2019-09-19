@@ -1,3 +1,176 @@
-<p>
-  gloves-masks works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 405px; height: 405px;"
+            src="../../../../assets/img/mask-gloves.jpg"
+            alt="Gloves and Mask"
+            data-toggle="modal"
+            data-target="#basicExample"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="../../../../assets/img/mask-gloves.jpg"
+                    alt="Gloves and Mask"
+                  />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">GLOVES & MASKS</h3>
+          <p class="card-text lead">
+            Our gloves and masks protect you and your employees from harmful
+            particles being breathed in and hand injuries.
+          </p>
+          <p class="card-text lead">
+            Perfect for general warehouse usage: Protects from paint, dust, and
+            chemical particles.
+          </p>
+          <p class="card-text lead">
+            Warehouse gloves prevent hands from scrapes and cuts.
+          </p>
+          <p class="card-text lead">
+            <strong>A much larger variety available:</strong> Just call in!
+          </p>
+        </div>
+      </div>
+
+      <!-- TABLE 1 -->
+      <h3 class="lead">GLOVES</h3>
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col">
+            PRODUCT #
+          </th>
+          <th scope="col">
+            DESCRIPTION
+          </th>
+          <th scope="col">
+            SIZING
+          </th>
+          <th scope="col" mdbTooltip="Pairs Per Pack" placement="left">
+            PACK/
+          </th>
+          <th scope="col" mdbTooltip="Pairs Per Case" placement="left">
+            CASE
+          </th>
+          <th scope="col">
+            ADD TO CART
+          </th>
+        </tr>
+        </thead>
+        <tr *ngFor="let gloves of gloves" style="text-align: center;">
+          <td class="item align-middle">{{ gloves.productNumber }}</td>
+          <td class="item align-middle">{{ gloves.description }}</td>
+          <td class="item align-middle">{{ gloves.sizing }}</td>
+          <td class="item align-middle">{{ gloves.pairsPerPack }}</td>
+          <td class="item align-middle">{{ gloves.pairsPerCase }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+
+      <!-- TABLE 2 -->
+      <h3 class="lead">MASKS</h3>
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col">
+            PRODUCT #
+          </th>
+          <th scope="col">
+            DESCRIPTION
+          </th>
+          <th scope="col">
+            NAME
+          </th>
+          <th scope="col" mdbTooltip="Number Per Pack" placement="left">
+            PACK
+          </th>
+          <th scope="col" mdbTooltip="Pack Per Case" placement="left">
+            CASE
+          </th>
+          <th scope="col">
+            ADD TO CART
+          </th>
+        </tr>
+        </thead>
+        <tr *ngFor="let mask of masks" style="text-align: center;">
+          <td class="item align-middle">{{ mask.productNumber }}</td>
+          <td class="item align-middle">{{ mask.description }}</td>
+          <td class="item align-middle">{{ mask.name }}</td>
+          <td class="item align-middle">{{ mask.numberPerPack }}</td>
+          <td class="item align-middle">{{ mask.packPerCase }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>

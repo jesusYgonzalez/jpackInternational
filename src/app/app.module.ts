@@ -61,7 +61,6 @@ import { WaterActivatedGummedTapeComponent } from './products/tape/water-activat
 import { AirPillowMachineComponent } from './products/tools-machines/air-pillow-machine/air-pillow-machine.component';
 import { GlueGunComponent } from './products/tools-machines/glue-gun/glue-gun.component';
 import { CableTiesComponent } from './products/misc/cable-ties/cable-ties.component';
-import { DockBoardComponent } from './products/misc/dock-board/dock-board.component';
 import { GlovesMasksComponent } from './products/misc/gloves-masks/gloves-masks.component';
 import { MetalTruckSealComponent } from './products/misc/metal-truck-seal/metal-truck-seal.component';
 import { ShippingScalesComponent } from './products/misc/shipping-scales/shipping-scales.component';
@@ -142,7 +141,6 @@ import { WrappingPaperDispenserComponent } from './products/tools-machines/wrapp
     AirPillowMachineComponent,
     GlueGunComponent,
     CableTiesComponent,
-    DockBoardComponent,
     GlovesMasksComponent,
     MetalTruckSealComponent,
     ShippingScalesComponent,

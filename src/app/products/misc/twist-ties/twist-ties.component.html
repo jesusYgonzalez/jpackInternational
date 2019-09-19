@@ -1,3 +1,200 @@
-<p>
-  twist-ties works!
-</p>
+<!--suppress ALL -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="container mb-5 col-12 col-lg-6">
+        <div class="row justify-content-center">
+          <img
+            class="z-depth-1 rounded"
+            style="width: 495px; height: 500px;"
+            src="../../../../assets/img/twist-tie.jpg"
+            alt="Twist Ties"
+            data-toggle="modal"
+            data-target="#basicExample"
+            (click)="frame.show()"
+            mdbWavesEffect
+          />
+          <div
+            mdbModal
+            #frame="mdbModal"
+            class="modal fade"
+            id="frameModalTop"
+            role="dialog"
+            aria-labelledby="myModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Image -->
+                <div class="modal-body d-flex justify-content-center">
+                  <img
+                    src="../../../../assets/img/twist-tie.jpg"
+                    alt="Twist Ties"
+                  />
+                </div>
+                <!-- Button -->
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    mdbBtn
+                    color="primary"
+                    class="waves-light"
+                    mdbWavesEffect
+                    data-dismiss="modal"
+                    (click)="frame.hide()"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-100 mb-5 col-12 col-lg-6">
+        <div class="card-body">
+          <h3 class="card-title">SHIPPING SCALES</h3>
+          <p class="card-text lead">
+            Our shipping scales are 100% accurate and easy to use. Clear and
+            easy-to-read LCD screen.
+          </p>
+          <p class="card-text lead">
+            <strong>Portable:</strong> Take it anywhere!
+          </p>
+          <p class="card-text lead">
+            <strong>Switch between Kg. & Lb.</strong>
+            <strong>For 150 lb., 330 lb., & 440 lb.</strong>
+          </p>
+          <p class="card-text lead">
+            i. Easy Buttons: On/Off, Tare, & Mod
+          </p>
+          <p class="card-text lead">
+            ii. Powered by both V Battery or AC Adaptor.
+          </p>
+          <p class="card-text lead">
+            iii. Low Battery/Overload Indication.
+          </p>
+          <p class="card-text lead">
+            iv. Auto-Shut off.
+          </p>
+          <p class="card-text lead">
+            <strong>For 5,000 lb. & 10,000 lb.</strong>
+          </p>
+          <p class="card-text lead">
+            i. Heavy Duty Steel channeled iron structure.
+          </p>
+          <p class="card-text lead">
+            ii. Overload indication
+          </p>
+          <p class="card-text lead">
+            iii. Converts between Gross & Net weight.
+          </p>
+          <p class="card-text lead">
+            iv. Auto-Zero tracking.
+          </p>
+        </div>
+      </div>
+
+      <!-- TABLE 1 -->
+      <h3 class="lead">PLASTIC TWIST TIES</h3>
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col">
+            PRODUCT#
+          </th>
+          <th scope="col">
+            LENGTH
+          </th>
+          <th scope="col">
+            MATERIAL
+          </th>
+          <th scope="col">
+            COLOR
+          </th>
+          <th scope="col">
+            NO./BOX
+          </th>
+          <th scope="col">
+            ADD TO CART
+          </th>
+        </tr>
+        </thead>
+        <tr *ngFor="let ties of plasticTwistTies" style="text-align: center;">
+          <td class="item align-middle">{{ ties.productNumber }}</td>
+          <td class="item align-middle">{{ ties.length }}</td>
+          <td class="item align-middle">{{ ties.material }}</td>
+          <td class="item align-middle">{{ ties.color }}</td>
+          <td class="item align-middle">{{ ties.numberPerBox }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+
+      <!-- TABLE 2 -->
+      <h3 class="lead">PAPER TWIST TIES</h3>
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col">
+            PRODUCT#
+          </th>
+          <th scope="col">
+            LENGTH
+          </th>
+          <th scope="col">
+            MATERIAL
+          </th>
+          <th scope="col">
+            COLOR
+          </th>
+          <th scope="col">
+            NO./BOX
+          </th>
+          <th scope="col">
+            ADD TO CART
+          </th>
+        </tr>
+        </thead>
+        <tr *ngFor="let ties of paperTwistTies" style="text-align: center;">
+          <td class="item align-middle">{{ ties.productNumber }}</td>
+          <td class="item align-middle">{{ ties.length }}</td>
+          <td class="item align-middle">{{ ties.material }}</td>
+          <td class="item align-middle">{{ ties.color }}</td>
+          <td class="item align-middle">{{ ties.numberPerBox }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</main>

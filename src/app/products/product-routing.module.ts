@@ -58,6 +58,11 @@ import { WrappingPaperDispenserComponent } from './tools-machines/wrapping-paper
 import { UtilityKnifeComponent } from './tools-machines/utility-knife/utility-knife.component';
 import { PolyTubingDispenserComponent } from './tools-machines/poly-tubing-dispenser/poly-tubing-dispenser.component';
 import { VBoardsComponent } from './strapping/v-boards/v-boards.component';
+import { CableTiesComponent } from './misc/cable-ties/cable-ties.component';
+import { GlovesMasksComponent } from './misc/gloves-masks/gloves-masks.component';
+import { MetalTruckSealComponent } from './misc/metal-truck-seal/metal-truck-seal.component';
+import { ShippingScalesComponent } from './misc/shipping-scales/shipping-scales.component';
+import { TwistTiesComponent } from './misc/twist-ties/twist-ties.component';
 
 const productRoutes: Routes = [
   // BAGS //
@@ -124,7 +129,13 @@ const productRoutes: Routes = [
   { path: 'glue-gun', component: GlueGunComponent },
   { path: 'poly-tubing-dispenser', component: PolyTubingDispenserComponent },
   { path: 'utility-knife', component: UtilityKnifeComponent },
-  { path: 'wrapping-paper-dispenser', component: WrappingPaperDispenserComponent }
+  { path: 'wrapping-paper-dispenser', component: WrappingPaperDispenserComponent },
+  // MISCELLANEOUS //
+  { path: 'cable-ties', component: CableTiesComponent },
+  { path: 'gloves-masks', component: GlovesMasksComponent },
+  { path: 'metal-truck-seal', component: MetalTruckSealComponent },
+  { path: 'shipping-scales', component: ShippingScalesComponent },
+  { path: 'twist-ties', component: TwistTiesComponent },
 ];
 
 @NgModule({

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CushioningFoamComponent implements OnInit {
   constructor() {}
 
-  cusioningFoam = [
+  cushioningFoam = [
     {
       productRegular: 'BUB-PF1324C',
       productNumberAntiStatic: 'BUB-PF1324P',

@@ -54,7 +54,7 @@
 
       <div class="card w-100 mb-5 col-12 col-lg-6">
         <div class="card-body">
-          <h3 class="card-title">CARTON SEALING TAPE (SPECIALTY)</h3>
+          <h3 class="card-title">GLUE GUN / GLUE STICKS</h3>
           <p class="card-text lead">
             Melt solid glue sticks into a durable and reliable adhesive.
           </p>
@@ -67,7 +67,8 @@
         </div>
       </div>
 
-      <!--TABLE-->
+      <!-- TABLE 1 -->
+      <h3 class="lead">GLUE GUNS</h3>
       <table class="table mb-5 table-striped table-hover">
         <thead>
         <tr
@@ -85,14 +86,56 @@
         </tr>
         </thead>
         <tr
-          *ngFor="let tape of cartonSealingTape"
+          *ngFor="let glue of glueGun"
           style="text-align: center;"
         >
-          <td class="item align-middle">{{ tape.productNumber }}</td>
-          <td class="item align-middle">{{ tape.size }}</td>
-          <td class="item align-middle">{{ tape.durability }}</td>
-          <td class="item align-middle">{{ tape.color }}</td>
-          <td class="item align-middle">{{ tape.rollsPerCase }}</td>
+          <td class="item align-middle">{{ glue.productNumber }}</td>
+          <td class="item align-middle">{{ glue.description }}</td>
+          <td class="item align-middle">
+            <!--          <td>-->
+            <!--            <button>submit</button>-->
+            <!--          </td>-->
+            <input
+              class="productInput"
+              type="number"
+              placeholder="qty"
+              name="quantity"
+              min="1"
+              max="10"
+            />
+            <button class="btn btn-primary" type="submit">ADD</button>
+          </td>
+        </tr>
+      </table>
+
+      <!-- TABLE 2 -->
+      <h3 class="lead">GLUE STICKS</h3>
+      <table class="table mb-5 table-striped table-hover">
+        <thead>
+        <tr
+          style="text-align: center; background-color: #0c4b7d; color: white;"
+        >
+          <th scope="col">
+            PRODUCT #
+          </th>
+          <th scope="col">
+            DESCRIPTION
+          </th>
+          <th scope="col">
+            WEIGHT/CASE
+          </th>
+          <th scope="col">
+            ADD TO CART
+          </th>
+        </tr>
+        </thead>
+        <tr
+          *ngFor="let stick of glueStick"
+          style="text-align: center;"
+        >
+          <td class="item align-middle">{{ stick.productNumber }}</td>
+          <td class="item align-middle">{{ stick.description }}</td>
+          <td class="item align-middle">{{ stick.weight }}</td>
           <td class="item align-middle">
             <!--          <td>-->
             <!--            <button>submit</button>-->
